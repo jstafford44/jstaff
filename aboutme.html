@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>aboutme</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14599,12 +14599,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
         .top-bar {
             background-color: #1f3855;
-            color: rgba(204, 204, 204, 1) !important;;
+            color: rgba(204, 204, 204, 1) !important;
             padding: 10px;
             text-align: left;
             font-size: 24px;
             margin: 0; /* Remove any margin */
-            
         }
 
         .top-bar a {
@@ -14631,6 +14630,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             background-color: #ffffff;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            float: left; /* Float link-box to the left */
         }
 
         .container {
@@ -14641,12 +14641,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
         }
+
+        .additional-text {
+            float: left;
+            color: #000000;
+            margin-left: 20px; /* Add some margin to separate from link-box */
+        }
     </style>
 </head>
 <body>
     <div class="top-bar">
         SAT Study Guide
-        
         <a href="https://jstafford44.github.io" class="small-link">Home</a>
         <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
     </div>
@@ -14656,6 +14661,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         <a href="#">Link 2</a><br>
         <a href="#">Link 3</a><br>
         <!-- Add more links as needed -->
+    </div>
+    <div class="additional-text">
+        <p>Hello! My name is John Stafford and I...</p>
     </div>
     <div class="container">
 
