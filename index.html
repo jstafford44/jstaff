@@ -14589,107 +14589,140 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: Times, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<style>
+    body {
+        font-family: Times, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-        .top-bar {
-            background-color: #1f3855;
-            color: rgba(204, 204, 204, 1) !important;
-            padding: 10px;
-            text-align: left;
-            font-size: 24px;
-            margin: 0; /* Remove any margin */
-        }
+    .top-bar {
+        background-color: #1f3855;
+        color: rgba(204, 204, 204, 1) !important;
+        padding: 10px;
+        text-align: left;
+        font-size: 24px;
+        margin: 0; /* Remove any margin */
+    }
 
-        .top-bar a {
-            color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
-            text-decoration: none !important; /* Remove underlining */
-            margin-right: 15px;
-        }
+    .top-bar a {
+        color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
+        text-decoration: none !important; /* Remove underlining */
+        margin-right: 15px;
+    }
 
-        .top-bar .title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; /* Keep the title in white color */
-        }
+    .top-bar .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff; /* Keep the title in white color */
+    }
 
-        .top-bar .small-link {
-            font-size: 18px; /* Adjust the font size as needed */
-        }
+    .top-bar .small-link {
+        font-size: 18px; /* Adjust the font size as needed */
+    }
 
-        .link-box {
-            width: 10%;
-            max-height: 200px;
-            overflow-y: auto;
-            padding: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            float: left; /* Float link-box to the left */
-        }
+    .additional-container {
+        width: 70%;
+        margin-top: 5%; /* Adjust the top margin to leave space for the blue bar */
+        margin-left: 17%;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 20px 20px 20px 0;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        .additional-text {
-            float: left;
-            margin-left: 20px; /* Add some margin to separate from link-box */
-        }
+    .additional-text {
+        font-size: 18px;
+        color: #000000;
+    }
+    .title-text {
+        font-size: 36px;
+        color: #000000;
+        margin-top: -7%;
+        font-weight: bold;
+    }
+    .link-box-left {
+        width: 12%;
+        overflow-y: auto;
+        padding: 2%;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5%;
+        float: left;
+        position: fixed;
+        top: 10%; /* Adjusted to align under the blue bar */
+        left: 0; /* Adjusted to move to the far left */
+    }
 
-        .overview-title {
-            font-size: 36px;
-            color: #000000;
-            font-weight: bold;
-        }
+    .toc {
+        width: 20%; /* Adjusted width */
+        position: fixed;
+        top: 8%; /* Adjusted to align under the blue bar */
+        right: -5%; /* Adjusted to move to the far right */
+        transition: top 0.3s;
+    }
 
-        .overview-text {
-            font-size: 18px;
-            color: #000000;
-        }
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-        SAT Study Guide
-        <a href="https://jstafford44.github.io" class="small-link">Home</a>
-        <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
-    </div>
-    <div class="link-box">
-        <!-- Add your scrollable link content here -->
-        <a href="https://jstafford44.github.io/stresses">Common Stresses</a><br>
-        <a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a><br>
-        <a href="https://jstafford44.github.io/algebra">Algebra</a><br>
-        <a href="https://jstafford44.github.io/calculus">Calculus</a><br>
-        <a href="https://jstafford44.github.io/logarithmics">Logarithmics</a><br>
-  
-        <!-- Add more links as needed -->
+    .toc.sticky {
+        top: 0;
+    }
+</style>
+
+<div class="top-bar">
+    SAT Study Guide
+    <a href="https://jstafford44.github.io" class="small-link">Home</a>
+    <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
+</div>
+
+<div class="additional-container">
+    <div class="title-text">
+        Overview
     </div>
     <div class="additional-text">
-        <div class="overview-title">Overview</div>
-        <div class="overview-text">
-            This guide comprises X distinct but overlapping modules. Each module is listed on the left hand side, and is broken into three parts:
-        </div>
-        <div class="overview-text">
-        1. Fundamentals: Topics to know 
-        </div>
-        <div class="overview-text">
-        2. Practice Problems 
-        </div>
-        <div class="overview-text">
-        3. Real World Applications
-        </div>
+        <!-- Your text content goes here -->
+        This guide comprises X distinct but overlapping modules. Each module is listed on the left-hand side and is broken into three parts:
+    <div class="additional-text">
+        1. Fundamentals: Topics to know
     </div>
+    <div class="additional-text">
+        2. Lessons
+    </div>
+    <div class="additional-text">
+        3. Real World Applications
+    </div>
+    <div class="additional-text">
+        4. Practice Problems
+    </div>
+    <div class="additional-text">
+        The SAT/ACT tests whether you can master the SAT/ACT, not necessarily your school math skills.
+    </div>
+    <div class="additional-text">
+        Practicing and realizing shortfalls is incredibly important
+    </div>
+</div>
 
+
+<div class="toc">
+    <ul>
+        <li><a href="#fundamentals">Fundamentals</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#real-life-applications">Real Life Applications</a></li>
+        <li><a href="#problems">Practice Problems</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+</div>
+
+<div class="link-box-left">
+    <!-- Your left link box content goes here -->
+    <li><a href="https://jstafford44.github.io/stresses">Common Stresses</a></li>
+    <li><a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a></li>
+    <li><a href="https://jstafford44.github.io/numQuan">Number and Quantity</a></li>
+    <li><a href="https://jstafford44.github.io/algebra">Algebra</a></li>
+    <li><a href="https://jstafford44.github.io/functions">Functions</a></li>
+    <li><a href="https://jstafford44.github.io/algFunc">Algebra & Functions</a></li>
+    <li><a href="https://jstafford44.github.io/geometry">Geometry</a></li>
+    <li><a href="https://jstafford44.github.io/statistics">Statistics and Probability</a></li>
+    <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
+</div>
+
+</body>
+</html>
 
 </div>
 
