@@ -15019,7 +15019,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 document.getElementById('password-wall').style.display = 'none';
                 document.getElementById('hello-message').style.display = 'block';
                 // Store the password state in localStorage
-                sessionStorage.setItem('passwordEntered', 'true');
+                localStorage.setItem('passwordEntered', 'true');
             } else {
                 alert('Incorrect password. Please try again.');
             }
