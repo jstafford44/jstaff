@@ -14600,16 +14600,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             align-items: center;
             backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
         }
-        #hello-message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #333;
-            display: none;
-        }
-        body {
+    body {
         font-family: Times, sans-serif;
         margin: 0;
         padding: 0;
@@ -14700,7 +14691,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             <button onclick="checkPassword()">Submit</button>
         </div>
     </div>
-    
+        
 <div class="top-bar">
     ACT Study Guide
     <a href="https://jstafford44.github.io" class="small-link">Home</a>
@@ -15009,7 +15000,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
 </div>
 
-
     <script>
         function checkPassword() {
             var enteredPassword = document.getElementById('password-input').value;
@@ -15029,7 +15019,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         var storedPassword = localStorage.getItem('passwordEntered');
         if (storedPassword === 'true') {
             document.getElementById('password-wall').style.display = 'none';
-            document.getElementById('hello-message').style.display = 'block';
         }
     </script>
     
