@@ -14589,155 +14589,387 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: Times, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<head>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 
-        .top-bar {
-            background-color: #1f3855;
-            color: rgba(204, 204, 204, 1) !important;
-            padding: 10px;
-            text-align: left;
-            font-size: 24px;
-            margin: 0; /* Remove any margin */
-        }
+<style>
+    body {
+        font-family: Times, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-        .top-bar a {
-            color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
-            text-decoration: none !important; /* Remove underlining */
-            margin-right: 15px;
-        }
+    .top-bar {
+        background-color: #1f3855;
+        color: rgba(204, 204, 204, 1) !important;
+        padding: 10px;
+        text-align: left;
+        font-size: 24px;
+        margin: 0; /* Remove any margin */
+    }
 
-        .top-bar .title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; /* Keep the title in white color */
-        }
+    .top-bar a {
+        color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
+        text-decoration: none !important; /* Remove underlining */
+        margin-right: 15px;
+    }
 
-        .top-bar .small-link {
-            font-size: 18px; /* Adjust the font size as needed */
-        }
+    .top-bar .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff; /* Keep the title in white color */
+    }
 
-        .link-box {
-            width: 10%;
-            max-height: 200px;
-            overflow-y: auto;
-            padding: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            float: left; /* Float link-box to the left */
-        }
+    .top-bar .small-link {
+        font-size: 18px; /* Adjust the font size as needed */
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 20px 20px 20px 0;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        .additional-text {
-            float: left;
-            margin-left: 20px; /* Add some margin to separate from link-box */
-        }
+    .additional-container {
+        width: 70%;
+        margin-top: 0%; /* Adjust the top margin to leave space for the blue bar */
+        margin-left: 17%;
+    }
 
-        .overview-title {
-            font-size: 36px;
-            color: #000000;
-            font-weight: bold;
-        }
+    .additional-text {
+        font-size: 18px;
+        color: #000000;
+    }
+    .important-text {
+        font-size: 18px;
+        color: #6CA6CD;
+    }
+    .side-text {
+        font-size: 15px;
+        color: #000000;
+        margin-left: 4%;
+    }
+    .title-text {
+        font-size: 36px;
+        color: #000000;
+        margin-top: 0%;
+        font-weight: bold;
+    }
+    .link-box-left {
+        width: 12%;
+        overflow-y: auto;
+        padding: 2%;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5%;
+        float: left;
+        position: fixed;
+        top: 10%; /* Adjusted to align under the blue bar */
+        left: 0; /* Adjusted to move to the far left */
+    }
 
-        .overview-text {
-            font-size: 18px;
-            color: #000000;
-        }
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-        SAT Study Guide
-        <a href="https://jstafford44.github.io" class="small-link">Home</a>
-        <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
-    </div>
-    <div class="link-box">
-        <!-- Add your scrollable link content here -->
-        <a href="https://jstafford44.github.io/stresses">Common Stresses</a><br>
-        <a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a><br>        
-        <a href="https://jstafford44.github.io/algebra">Algebra</a><br>
-        <a href="https://jstafford44.github.io/calculus">Calculus</a><br>
-        <a href="https://jstafford44.github.io/logarithmics">Logarithmics</a><br>
-  
-        <!-- Add more links as needed -->
+    .toc {
+        width: 20%; /* Adjusted width */
+        position: fixed;
+        top: 8%; /* Adjusted to align under the blue bar */
+        right: -5%; /* Adjusted to move to the far right */
+        transition: top 0.3s;
+    }
+
+    .toc.sticky {
+        top: 0;
+    }
+</style>
+
+<div class="top-bar">
+    ACT Study Guide
+    <a href="https://jstafford44.github.io" class="small-link">Home</a>
+    <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
+</div>
+
+<div class="additional-container">
+    <div class="title-text">
+        Algebra Topics
     </div>
     <div class="additional-text">
-        <div class="overview-title">Topics to know</div>
-        <div class="overview-text">
-            1. Demonstrate knowledge of basic expressions, such as b + g to identify a total
-        </div>
-        <div class="overview-text">
-            2. Solve equations in the form x + a = b
-        </div>
-        <div class="overview-text">
-            3. Use substitution to evaluate mathematical expressions
-        </div>
-        <div class="overview-text">
-            4. Combine like therms, such as 2x + 5x
-        </div>
-        <div class="overview-text">
-            5. Add and subtract algebraic expressions
-        </div>
-        <div class="overview-text">
-            6. Multiply two binomials
-        </div>
-        <div class="overview-text">
-            7. Match inequalities with their graphs on the number line
-        </div>
-        <div class="overview-text">
-            8. Demonstrate knowledge of slope
-        </div>
-        <div class="overview-text">
-            9. Solve real-world problems using first-degree equations
-        </div>
-        <div class="overview-text">
-            10. Solve inequalities
-        </div>
-        <div class="overview-text">
-            11. Match linear or compoudn inequalities with their graphs on the number line
-        </div>
-        <div class="overview-text">
-            12. Add, subtract, and multiply polynomials
-        </div>
-        <div class="overview-text">
-            13. Solve quadratic equations
-        </div>
-        <div class="overview-text">
-            14. Factor quadratics
-        </div>
-        <div class="overview-text">
-            15. Work with squares/square roots and cubes/cube roots of numbers
-        </div>
-        <div class="overview-text">
-            16. Work with scientific notation
-        </div>
-        <div class="overview-text">
-            17. Solve problems involving positive integer exponents
-        </div>
-        <div class="overview-text">
-            18. Solve system of two linear equations
-        </div>
-        <div class="overview-text">
-            19. Solve absolute value equations and inequalities
-        </div>
-        <div class="overview-text">
-            20. Match quadratic inequalities with their graphs on the number line
-        </div>
+        Algebra represents the foundation of much of what is tested on this exam. Mastering the following 19 topics is critical to your success. These begin relatively basic,
+        and get progressively more involved as they incorporate prior topics. Examples are found within each topic to help describe the basics, and real SAT/ACT problems
+        are found at the end that specifically target these topics. Even if you know a topic, take the time to read and understand it, as much of the test is recognizing patterns
+        and understanding how to solve them.
     </div>
+    <div class="side-text">
+        <br>
+    </div>
+    <div class="important-text">
+        1. Knowledge of basic expressions
+    </div>
+    <div class="side-text">
+        Consider the expression <span style="color: red;">a</span> + <span style="color: blue;">b</span>, where <span style="color: red;">a</span> represents 
+        the number of apples and <span style="color: blue;">b</span> denotes the number of bananas. 
+        If <span style="color: red;">a</span> equals 3 and <span style="color: blue;">b</span> equals 5, 
+        evaluating the expression results in <span style="color: red;">3</span> + <span style="color: blue;">5</span>, yielding a total of 8. 
+        This showcases how basic expressions, like <span style="color: red;">a</span> + <span style="color: blue;">b</span> can be used to identify 
+        totals in practical scenarios. A potential question from <span style="color: #6CA6CD;">Topic 1</span> could be:
+        <center>
+        If <span style="color: red;">a</span> = 7 and <span style="color: blue;">b</span> = 10, what is <span style="color: red;">a</span> + <span style="color: blue;">b</span>?
+        </center>
+    </div>
+    <div class="important-text">
+        2. Solve equations in the form <span style="color: black;">x</span> <span style="color: black;">+</span> <span style="color: red;">a</span> =  <span style="color: blue;">b</span>
+    </div>
+    <div class="side-text">
+        Mastering solving equations in this form is necessary when it comes to more later topics.
+        We can use our knowledge from Topic 1 in "x + 3 = 5," recognizing that 'x' equals 2 demonstrates the ability to isolate variables and solve for unknowns. 
+        Proficiency in such equations is fundamental for tackling algebraic problems, a key aspect of the ACT examination.
+    </div>
+    <div class="important-text">
+        3. Use substitution to evaluate mathematical expressions
+    </div>
+    <div class="side-text">
+        Substitution involves replacing variables with known values to simplify expressions or equations. For instance, in 2<span style="color: red;">a</span> + 
+        3<span style="color: blue;">b</span> where <span style="color: red;">a</span> equals 4 and <span style="color: blue;">b</span> 
+        equals 2, substituting yields 2(<span style="color: red;">4</span>) + 3(<span style="color: blue;">2</span>), 
+        simplifying to 14. Substitution streamlines problem-solving by converting complex expressions into manageable calculations. Recognizing when substituion may be used
+        to complete the problem faster is also an incredibly useful skill.
+    </div>
+        <div class="important-text">
+        4. Combine like terms, such as 2<span style="color: red;">a</span> + 5<span style="color: red;">a</span>
+    </div>
+    <div class="side-text">
+        Combining like terms on the ACT involves simplifying expressions by adding or subtracting similar variables. 
+        For example, in 2<span style="color: red;">a</span> + 5<span style="color: red;">a</span>, combining like terms results in 7<span style="color: red;">a</span>
+    </div>
+    <div class ="important-text">
+        5. Add and subtract algebraic expressions
+    </div>
+    <div class="side-text">
+         Adding and subtracting algebraic expressions is an extension of Topic 4 and entails combining terms with similar variables. 
+         For instance, in 3<span style="color: red;">a</span> + 2<span style="color: blue;">b</span> - (2<span style="color: red;">a</span> - <span style="color: blue;">b</span>), 
+         combining yields 3<span style="color: red;">a</span> + 2<span style="color: blue;">b</span> - 2<span style="color: red;">a</span> + <span style="color: blue;">b</span>, 
+         simplifying to <span style="color: red;">a</span> + 3<span style="color: blue;">b</span>.
+    </div>
+    <div class ="important-text">
+        6. Multiply two binomials
+    </div>
+    <div class="side-text">
+        A binomial is a mathematical expression with two terms. Multiplying two binomials, like (<span style="color: red;">a</span> + <span style="color: blue;">b</span>)
+        (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>), 
+        involves using the <span style="font-weight: bold;">distributive</span> property to combine terms. For instance, (<span style="color: red;">a</span> + 
+        <span style="color: blue;">b</span>) (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>) expands to 
+        <span style="color: red;">a</span><span style="color: #00FF00;">c</span> + <span style="color: red;">a</span><span style="color: #FFA500;">d</span> + 
+        <span style="color: blue;">b</span><span style="color: #00FF00;">c</span> + <span style="color: blue;">b</span><span style="color: #FFA500;">d</span>.
+    </div>
+    <div class ="important-text">
+        7. Match equalities with their graphs on the number line
+    </div>
+    <div class="side-text">
+        An inequality is a mathematical statement expressing a relationship between two expressions, indicating that one is greater than, less than, or not equal to the other. 
+        Solving inequalities demonstrates the ability to analyze and manipulate mathematical relationships. Determining the shape of a graph from an inequality often
+        requires some steps similar to that in previous topics. For example, in 2x + 5 < 11, solving for x yields x < 3. On a graph, this would appear as all values lower than x = 3,
+        uninclusive. Similarly, the inequality x + y < 0 can be thought of as y < -x, or y > x, this is a line through (0,0) with a slope of 1.
+        We will cover solving these more in depth later. 
+    </div>
+    <div class ="important-text">
+        8. Demonstrate knowledge of slope
+    </div>
+    <div class="side-text">   
+        Slope represents the steepness of a line in a coordinate system. You may encounter multiple versions of representing on a line on the ACT. In point-slope form, 
+        it's expressed as <span style="color: blue;">y</span> - <span style="color: blue;">y₁</span> = <span style="font-weight: bold;">m</span>
+        (<span style="color: red;">x</span> - <span style="color: red;">x₁</span>), 
+        where (<span style="color: red;">x₁</span>, <span style="color: blue;">y₁</span>) is a point, and <span style="font-weight: bold;">m</span> is the slope. 
+        In slope-intercept form, it's <span style="color: blue;">y</span> = <span style="font-weight: bold;">m</span><span style="color: red;">x</span> + b, 
+        where m is the slope and b is the y-intercept. 
+        In standard form (a rearrangment of slope-intercept), it's A<span style="color: red;">x</span> + B<span style="color: blue;">y</span> = C, where A, B, and C are constants. 
+        On the ACT, understanding these forms is vital for graphing lines 
+        and solving equations. For example, in <span style="color: blue;">y</span> = 2<span style="color: red;">x</span> + 3, the slope is 2, and the y-intercept is 3.
+    </div>
+    <div class ="important-text">
+        9. Solving real-world problems using first degree equations
+    </div>
+    <div class="side-text">   
+        A first-degree equation is a linear equation where the highest power of the variable is 1. On the ACT, it often means taking the context of the problem to develop
+        an equation(s) that can be solved.
+    </div>
+    <div class ="important-text">
+        10. Solving inequalities
+    </div>
+    <div class="side-text">   
+        Solving inequalities involves manipulating expressions to determine the set of values satisfying the inequality. 
+        Begin by isolating the variable on one side of the inequality sign. Perform operations such as addition, subtraction, multiplication, or 
+        division on both sides, ensuring to maintain the inequality direction. Multiplying or dividing a negative number has the effect of flipping the inequality direction. 
+        For example,
+        consider the inequality -3<span style="color: red;">x</span> < 9. When the coefficient in front of <span style="color: red;">x</span>, -3, is divided over it flips the
+        inequality such that the final answer is <span style="color: red;">x</span> > 3
+    </div>
+    <div class ="important-text">
+        11. Adding, subtracting, and multiplying polynomials
+    </div>
+    <div class="side-text">   
+        Adding and subtracting polynomials is a direct application of combining like terms. Multiplying polnomials incoroporates some of the topics found in multiplying binomials
+        (if it is a binomial). Generally speaking, understanding how to factor 
+    </div>
+    <div class ="important-text">
+        12. Solving quadratic equations
+    </div>
+    <div class="side-text">   
+     Solving quadratic equations on the ACT involves techniques like factoring, completing the square, 
+     or using the quadratic formula. Understanding these methods is crucial for efficiently finding roots. 
+     For example, in \( \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \), 
+     the quadratic formula is a powerful tool: 
+    \[ x = (-\color{blue}{b} \pm \sqrt{\color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c}})/(2 \cdot \color{red}{a}) \]
+     Factoring involves breaking down the equation into \((x - \color{green}{p})(x - \color{pink}{q}) = 0\), where \(\color{green}{p}\) and \(\color{pink}{q}\) are roots. 
+     The discriminant, \[ \Delta = \color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c} \] has important applications in determining the nature of the roots.
+     The roots of a quadratic can be postive, negative, complex or purely imaginary. 
+     Mastery of these methods is essential for swiftly and accurately solving quadratic equations, a common skill assessed in the ACT mathematics section.
+    </div>
+    <div class ="important-text">
+        13. Factoring quadratics
+    </div>
+    <div class="side-text">   
+        Factoring a quadratic equation with variable coefficients involves expressing it as the product of two binomials, though it could have unlimited factors. 
+        For instance, factoring \( \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} \) yields 
+        \( (\color{pink}{r}x + \color{green}{s}) \cdot (\color{brown}{t}x + \color{purple}{u}) \), where \(\color{pink}{r} \), \(\color{green}{s} \), 
+        \( \color{brown}{t} \), and \( \color{purple}{u}\) 
+        are determined by the equation's coefficients. This can always be done using the quadratic formula from topic 11, but tricks can be used to help quicken this process.
+    </div>
+    <div class ="important-text">
+        14. Working with squares/square roots and cubes/cube roots
+    </div>
+    <div class="side-text">   
+        Common mistakes involving squares and cubes include misapplying distribution, neglecting negative roots, and misunderstanding exponent rules. Solving inequalities with
+        roots is also tricky, for if there is a square you must consider both the negative and the postive solution which results in a system of inequalities. Consider the equation
+        \( \color{red}{a} - \color{blue}{b}  > x^2 \), if we take the square root of \( \color{red}{a} - \color{blue}{b} \), we must consider both the positive solution and the negative solution. This results in two inequalities as follows:
+        \[ -\sqrt{\color{red}{a} - \color{blue}{b}} > x \] \[ \sqrt{\color{red}{a} - \color{blue}{b}} > x \] If, for example, \( \color{red}{a} - \color{blue}{b} = 9 \), we would have
+        a graph of all points where x is greater than 3 or less than -3. Cubed roots do not have this same issue, but understanding these differences through practice
+         and familiarity with these concepts can help avoid these pitfalls.
+    </div>
+    <div class ="important-text">
+        15. Scientific Notation
+    </div>
+    <div class="side-text">   
+        Scientific notation simplifies expressing large or small numbers, aiding efficiency in scientific and mathematical contexts. Questions on scientific notation assess 
+        understanding of conversions, operations, and applications. Students must perform calculations, compare values, or convert between standard and scientific notation. 
+        Scientic notation takes the form:  \[ \color{red}{a} \cdot 10^\color{blue}{b} \] where \(\color{red}{a} \) is ideally 0 and 10 (typically 3 digits), 
+        and \( \color{blue}{b} \) is any whole number.
+        Examples include: \[1.27 \cdot 10^{5} = 127,000 \] \[-1.27 \cdot 10^{5} = -127,000 \] \[1.27 \cdot 10^{-5} = 0.0000127 \]  \[-1.27 \cdot 10^{-5} = -0.0000127 \]
+    </div>
+    <div class ="important-text">
+        16. Solve problems involving positive integer exponents
+    </div>
+    <div class="side-text">   
+        Manipulating exponents and understanding their rules is essential to this exam. There are 8 exponent rules to know.
+        \[\color{red}{a}^0 = 1 \] \[\color{red}{a}^1 = \color{red}{a} \] 
+        \[\color{red}{a}^{\color{blue}{m}} + \color{red}{a}^{\color{green}{n}} = \color{red}{a}^{\color{blue}{m}+\color{green}{n}} \]
+        \[\color{red}{a}^{\color{blue}{m}} \,/\, \color{red}{a}^{\color{green}{n}} = \color{red}{a}^{\color{blue}{m}-\color{green}{n}}\]
+        \[\color{red}{a}^{-\color{blue}{m}} = {1}/{\color{red}{a}^{\color{blue}{m}}}\]
+        \[(\color{red}{a}^{\color{blue}{m}})^{\color{green}{n}} = \color{red}{a}^{\color{blue}{m} \cdot \color{green}{n}} \]
+        \[(\color{red}{a} \cdot \color{brown}{b})^{\color{blue}{m}} = \color{red}{a}^{\color{blue}{m}} \cdot \color{brown}{b}^{\color{blue}{m}} \]
+        \[(\color{red}{a} \,/\, \color{brown}{b})^{\color{blue}{m}} = \color{red}{a}^{\color{blue}{m}} \, /\, \color{brown}{b}^{\color{blue}{m}} \]
+        Example questions can be provided at the end, but take time in memorizing these rules so they can be applied quickly and accurately.
+    </div>
+        <div class ="important-text">
+        17. Solve system of two linear equations
+    </div>
+    <div class="side-text">   
+        Systems of equations involve multiple equations with shared variables. They are solved algebraically using methods like substitution or elimination to find 
+        consistent solutions where all equations are simultaneously satisfied. Graphical methods can also be used to illustrate intersections, aiding in interpreting 
+        real-world scenarios or mathematical models. In the most basic form, a system of two equations may look like this:
+        \[ \color{red}{a}x + \color{blue}{b}y = \color{purple}{c} \] \[ \color{green}{d}x + \color{pink}{e}y = \color{brown}{f} \] where coefficients are all known real numbers.
+        This 2-equation system is solved by isolating x (or y) in equation 1 (or 2) and substituting that into the other equation and solving for the variable from which we can
+        calculate the other. For example, consider this system of equations:
+        \[ 3x + 4y = -23 \] \[ 2y - x = -19 \]
+        If we solve for x in equation 2 (avoids fractions) and plug into equation 2 we find:
+        \[ 3 \cdot (19 + 2y) + 4y = -23 \] where \[57 + 10y = -23 \] thus \[y = -8 \] \[x = 3 \] where x was solved using equation 1 substituting the known y value.
+        Recognize that on a multiple choice exam, it may be faster to plug the options into equations to see if it fits rather than solving the system. Often, these equations
+        are not directly given and instead must be derived from the context of the problem, so keeping variables straight can be a challenge. 
 
+        Importantly, if there are more variables than equations, the system is unsolvable. That does not necessarily mean that a system with the same or more equations results
+        in a solvable system. This is due to the fact that on equation may be 
+
+    </div>
+    <div class ="important-text">
+        18. Solve absolute value with inequalities
+    </div>
+    <div class="side-text">   
+        Absolute value measures the distance of a number from zero on the number line, always yielding a non-negative result. This section covers the application of 
+        absolute values in equations and inequality equations. A basic example utilizing the property of absolute value is as follows:
+        \[|-4| - |8-53| = ? \]
+        The term |-4| is equivilent to 4, and |8-53| = |-45| = 45 thus 4-45 = -41. A slightly more involved question may ask:
+        <center>
+        Find the solutions to the equation  \( |2x - 8| + 3 = 5 \)
+        </center>
+        We want to simplify this problem as much as possible so the equation can become:
+        \[|2x - 8| = 2 \]
+        This is equivilent to following two equations:
+        \[2x - 8 = 2 \] \[2x - 8 = -2\]
+        These can be solved to find x = 5, and x = 3. In either case the key to solving these problems is simplifying the equation and then using the properties of the
+        absolute value. Absolute values can also be used in inqualities and can get very complicated. Lets consider the most basic case:
+        \[|x + \color{red}{a}| < \color{blue}{b} \]
+        This equation describes a solution set of real numbers. Often, the exam asks for bounds which we can solve for generally in a similar fashion to that used before, however,
+        we must remember the rules of inequalities for swithcing signs. The above equation would simplify into two inequalities as follows:
+        \[x < \color{blue}{b} - \color{red}{a} \] \[x > -\color{blue}{b} - \color{red}{a} \] 
+        Notice on the second equation, which takes the negative solution of \( \color{blue}{b} \), the inequality has flipped.
+    </div>
+    <div class ="important-text">
+        19. Match quadratic inequalities with their graphs on the number line
+    </div>
+    <div class="side-text">   
+    Quadratic inequalities involve expressions of the form \[\color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} > \color{green}{d} \] 
+    or \[\color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} < \color{green}{d}\] 
+    where \(\color{red}{a} \), \(\color{blue}{b} \), \(\color{orange}{c} \), and \(\color{green}{d} \) are constants where \(\color{green}{d} \) is typically 0.
+    </div>
+    <div class ="important-text">
+        20. Solving quadratic inequaltities
+    </div>
+    <div class="side-text">       
+    Generally, quadratic inequality questions are asked to test your knowledge of factoring and deductive reasoning. Lets look at a problem to see how these typcially go.
+    <center>
+    Solve the equation \( (x-1)(x-5) < 0 \)
+    </center>
+    This question is asking for the set of all real numbers that satisfy the equation. If we first consider the graphical solution, we can plot a slightly modified
+     version of the equation shown below.
+    \[y = (x-1)(x-5) \]
+</div>
+<div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <img src="C:\Users\john\Downloads\actgraph.png" alt="Quadratic Expression Plot">
+</div>
+
+<div class="toc">
+    <ul>
+        <li><a href="#fundamentals">Fundamentals</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#real-life-applications">Real Life Applications</a></li>
+        <li><a href="#problems">Practice Problems</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+</div>
+<div class ="important-text">
+    </div>
+    <div class="side-text">   
+    The question asks where this graph is less than 0, and clearly it is between 1 and 5. This graphical solution, although accurate, is slow. We must consider an alternative.
+    Something unique about polynomials is that between two zeroes, the sign of the polynomial is always the same. We can exploit this fact to speed up our analysis.
+    Utilizing our knowledge from <span style="color: #6CA6CD;">Topic 3</span>, which covers substitution, we can instead plug in values that are within each bound as 
+    defined by the zeros of the function, here being
+    [-inf,1) U (1,5) U (5,+inf], to determine the sign of the function in each bound. For example, if we plug in x = 0 into our equation, we find the left hand side to be 
+    equal to 5 (positive). If we plug in 3, we find the left hand side to be equal to -4 (negative), and finally plug in 6 we find the function equal to 5 (positive). Therefore,
+    the bound that would satisfy the equation, the negative one, is (1,5), not inclusive, because 1 and 5 result it equally 0. This strategy relies on knowing the zeros, so
+    that may require solving through <span style="color: #6CA6CD;">Topic 12</span>
+   
+</div>
+  
+<div class="link-box-left">
+    <!-- Your left link box content goes here -->
+    <li><a href="https://jstafford44.github.io/stresses">Common Stresses</a></li>
+    <li><a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a></li>
+    <li><a href="https://jstafford44.github.io/numQuan">Number and Quantity</a></li>
+    <li><a href="https://jstafford44.github.io/algebra">Algebra</a></li>
+    <li><a href="https://jstafford44.github.io/functions">Functions</a></li>
+    <li><a href="https://jstafford44.github.io/algFunc">Algebra & Functions</a></li>
+    <li><a href="https://jstafford44.github.io/geometry">Geometry</a></li>
+    <li><a href="https://jstafford44.github.io/statistics">Statistics and Probability</a></li>
+    <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
+</div>
+
+</body>
+</html>
 
 </div>
 
