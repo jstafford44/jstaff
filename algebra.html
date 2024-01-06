@@ -14975,52 +14975,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-<div class="jp-OutputArea-child">
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div style="margin-left: 200px;"><p><strong>What is the capital of France?</strong></p><input type="radio" name="What is the capital of France?" value="Berlin"> Berlin<br>
-<input type="radio" name="What is the capital of France?" value="Madrid"> Madrid<br>
-<input type="radio" name="What is the capital of France?" value="Paris"> Paris<br>
-<input type="radio" name="What is the capital of France?" value="Rome"> Rome<br><br><button onclick="checkAnswer('What is the capital of France?', 'Paris')">Submit Answer</button><div id="What is the capital of France?_result"></div></div>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div style="margin-left: 200px;"><p><strong>What is the largest planet in our solar system?</strong></p><input type="radio" name="What is the largest planet in our solar system?" value="Earth"> Earth<br>
-<input type="radio" name="What is the largest planet in our solar system?" value="Jupiter"> Jupiter<br>
-<input type="radio" name="What is the largest planet in our solar system?" value="Mars"> Mars<br>
-<input type="radio" name="What is the largest planet in our solar system?" value="Venus"> Venus<br><br><button onclick="checkAnswer('What is the largest planet in our solar system?', 'Jupiter')">Submit Answer</button><div id="What is the largest planet in our solar system?_result"></div></div>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-
-<script>
-function checkAnswer(question, correct_answer) {
-    var selectedAnswer = document.querySelector('input[name="' + question + '"]:checked');
-    var resultDiv = document.getElementById(question + '_result');
-    if (selectedAnswer) {
-        var resultHtml = selectedAnswer.value === correct_answer ? '<p style="color:green;">Correct!</p>' : '<p style="color:red;">Incorrect. The correct answer is ' + correct_answer + '.</p>';
-        resultDiv.innerHTML = resultHtml;
-    } else {
-        resultDiv.innerHTML = '<p style="color:red;">Please select an answer before submitting.</p>';
-    }
-}
-</script>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
