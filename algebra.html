@@ -14586,16 +14586,30 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<!DOCTYPE html>
-<html>
-<head>
-<head>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
-<style>
-    body {
+    <style>
+        #password-wall {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+        }
+        #hello-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #333;
+            display: none;
+        }
+        body {
         font-family: Times, sans-serif;
         margin: 0;
         padding: 0;
@@ -14676,8 +14690,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     .toc.sticky {
         top: 0;
     }
-</style>
 
+    </style>
+    
+    <div id="password-wall">
+        <div style="text-align: center;">
+            <h2>Password Required</h2>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+    
 <div class="top-bar">
     ACT Study Guide
     <a href="https://jstafford44.github.io" class="small-link">Home</a>
@@ -14716,7 +14739,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
     <div class="side-text">
         Mastering solving equations in this form is necessary when it comes to more later topics.
-        We can use our knowledge from Topic 1 in "x + 3 = 5," recognizing that 'x' equals 2 demonstrates the ability to isolate variables and solve for unknowns. 
+        We can use our knowledge from <span style="color: #6CA6CD;">Topic 1</span> in "x + 3 = 5," recognizing that 'x' equals 2 demonstrates the ability to isolate variables and solve for unknowns. 
         Proficiency in such equations is fundamental for tackling algebraic problems, a key aspect of the ACT examination.
     </div>
     <div class="important-text">
@@ -14751,7 +14774,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="side-text">
         A binomial is a mathematical expression with two terms. Multiplying two binomials, like (<span style="color: red;">a</span> + <span style="color: blue;">b</span>)
         (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>), 
-        involves using the <span style="font-weight: bold;">distributive</span> property to combine terms. For instance, (<span style="color: red;">a</span> + 
+        involves using the <span style="font-weight: bold;">distributive</span> property to combine terms. The distributive property is the method of expanding factored terms.
+        It involves multiplying each term in one set of parentheses by every term in another set of parentheses. 
+        The goal is to eliminate the parentheses and express the expression as a sum or difference of individual terms.
+        For instance, (<span style="color: red;">a</span> + 
         <span style="color: blue;">b</span>) (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>) expands to 
         <span style="color: red;">a</span><span style="color: #00FF00;">c</span> + <span style="color: red;">a</span><span style="color: #FFA500;">d</span> + 
         <span style="color: blue;">b</span><span style="color: #00FF00;">c</span> + <span style="color: blue;">b</span><span style="color: #FFA500;">d</span>.
@@ -14785,7 +14811,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
     <div class="side-text">   
         A first-degree equation is a linear equation where the highest power of the variable is 1. On the ACT, it often means taking the context of the problem to develop
-        an equation(s) that can be solved.
+        an equation(s) that can be solved. For example,
+        A car rental company charges a flat fee of 30 per day to rent a car, plus an additional 0.15 per mile driven. 
+        If a customer rents a car and drives it for <span style="color: red;">x</span> miles in a day, the total cost (<span style="color: brown;">C</span>) can be modeled by the equation 
+        <span style="color: brown;">C</span> = 30 + 0.15<span style="color: red;">x</span> 
+        If a customer's total cost for renting a car for a day is 75, how many miles did they drive?
+
     </div>
     <div class ="important-text">
         10. Solving inequalities
@@ -14827,7 +14858,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         For instance, factoring \( \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} \) yields 
         \( (\color{pink}{r}x + \color{green}{s}) \cdot (\color{brown}{t}x + \color{purple}{u}) \), where \(\color{pink}{r} \), \(\color{green}{s} \), 
         \( \color{brown}{t} \), and \( \color{purple}{u}\) 
-        are determined by the equation's coefficients. This can always be done using the quadratic formula from topic 11, but tricks can be used to help quicken this process.
+        are determined by the equation's coefficients. This can always be done using the quadratic formula from <span style="color: #6CA6CD;">Topic 11</span>. In some cases, 
+        it is helpful to use some shortcuts. For instance, the case of difference of squares:
+        \[x^{\color{red}{2}} - \color{blue}{b} = 0 \] can be useful when b > 0 and a perfect square. It can be rearranged to 
+        \[(x-\color{blue}{b})(x+\color{blue}{b}) \]
+        Another helpful method requires the general form of a quadratic:
+        \[ \color{red}{a}x^2+\color{blue}{b}x+\color{brown}{c} \]
+        identifying two numbers whose product is \( \color{red}{a} \cdot \color{brown}{c} \) and whose sum is \( \color{blue}{b} \). 
+        This method is particularly helpful for factoring quadratic expressions when the numbers involved are small. Example:
+        \[ x^2+5x+6 \] Where \( \color{red}{a} \cdot \color{brown}{c} = 6 \) and \( \color{blue}{b} = 5 \). Two numbers that multiply to 6 and add to 5. These are 2 and 3.
+        So the final factored form is:
+        \[ x^2+5x+6 = (x+2)(x+3) \]
     </div>
     <div class ="important-text">
         14. Working with squares/square roots and cubes/cube roots
@@ -14968,9 +15009,30 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
 </div>
 
-</body>
-</html>
 
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('password-input').value;
+            
+            // Replace 'your_password' with the actual password
+            if (enteredPassword === '1234') {
+                document.getElementById('password-wall').style.display = 'none';
+                document.getElementById('hello-message').style.display = 'block';
+                // Store the password state in localStorage
+                sessionStorage.setItem('passwordEntered', 'true');
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        // Check if password was previously entered
+        var storedPassword = localStorage.getItem('passwordEntered');
+        if (storedPassword === 'true') {
+            document.getElementById('password-wall').style.display = 'none';
+            document.getElementById('hello-message').style.display = 'block';
+        }
+    </script>
+    
 </div>
 
 </div>
