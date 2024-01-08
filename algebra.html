@@ -14586,20 +14586,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-    <style>
-        #password-wall {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-        }
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+<style>
     body {
         font-family: Times, sans-serif;
         margin: 0;
@@ -14681,17 +14676,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     .toc.sticky {
         top: 0;
     }
+</style>
 
-    </style>
-    
-    <div id="password-wall">
-        <div style="text-align: center;">
-            <h2>Password Required</h2>
-            <input type="password" id="password-input" placeholder="Enter password">
-            <button onclick="checkPassword()">Submit</button>
-        </div>
-    </div>
-        
 <div class="top-bar">
     ACT Study Guide
     <a href="https://jstafford44.github.io" class="small-link">Home</a>
@@ -14740,21 +14726,22 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         Substitution involves replacing variables with known values to simplify expressions or equations. For instance, in 2<span style="color: red;">a</span> + 
         3<span style="color: blue;">b</span> where <span style="color: red;">a</span> equals 4 and <span style="color: blue;">b</span> 
         equals 2, substituting yields 2(<span style="color: red;">4</span>) + 3(<span style="color: blue;">2</span>), 
-        simplifying to 14. Substitution streamlines problem-solving by converting complex expressions into manageable calculations. Recognizing when substituion may be used
-        to complete the problem faster is also an incredibly useful skill.
+        simplifying to 14. Substitution streamlines problem-solving by converting complex expressions into manageable calculations. Recognizing when substitution may be used
+        to complete the problem faster (substituting multiple choice answers) is also an incredibly useful skill.
     </div>
         <div class="important-text">
         4. Combine like terms, such as 2<span style="color: red;">a</span> + 5<span style="color: red;">a</span>
     </div>
     <div class="side-text">
         Combining like terms on the ACT involves simplifying expressions by adding or subtracting similar variables. 
-        For example, in 2<span style="color: red;">a</span> + 5<span style="color: red;">a</span>, combining like terms results in 7<span style="color: red;">a</span>
+        For example, in 2<span style="color: red;">a</span> + 5<span style="color: red;">a</span>, combining like terms results in 7<span style="color: red;">a</span>.
+        The variable <span style="color: red;">a</span> in this case could be anything (i.e. \(10,0.5, (x+2)\), \(x^2 \), 1/x, \( 5^x \))
     </div>
     <div class ="important-text">
         5. Add and subtract algebraic expressions
     </div>
     <div class="side-text">
-         Adding and subtracting algebraic expressions is an extension of Topic 4 and entails combining terms with similar variables. 
+         Adding and subtracting algebraic expressions is an extension of <span style="color: #6CA6CD;">Topic 4</span> and entails combining terms with similar variables. 
          For instance, in 3<span style="color: red;">a</span> + 2<span style="color: blue;">b</span> - (2<span style="color: red;">a</span> - <span style="color: blue;">b</span>), 
          combining yields 3<span style="color: red;">a</span> + 2<span style="color: blue;">b</span> - 2<span style="color: red;">a</span> + <span style="color: blue;">b</span>, 
          simplifying to <span style="color: red;">a</span> + 3<span style="color: blue;">b</span>.
@@ -14771,31 +14758,75 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         For instance, (<span style="color: red;">a</span> + 
         <span style="color: blue;">b</span>) (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>) expands to 
         <span style="color: red;">a</span><span style="color: #00FF00;">c</span> + <span style="color: red;">a</span><span style="color: #FFA500;">d</span> + 
-        <span style="color: blue;">b</span><span style="color: #00FF00;">c</span> + <span style="color: blue;">b</span><span style="color: #FFA500;">d</span>.
+        <span style="color: blue;">b</span><span style="color: #00FF00;">c</span> + <span style="color: blue;">b</span><span style="color: #FFA500;">d</span>. Try this example:
+        <center>
+        Expand this polynomial:
+        \((x+2)(x+4) \)
+        </center>
     </div>
     <div class ="important-text">
-        7. Match equalities with their graphs on the number line
+        7. Solving and understanding inequalities
     </div>
     <div class="side-text">
-        An inequality is a mathematical statement expressing a relationship between two expressions, indicating that one is greater than, less than, or not equal to the other. 
-        Solving inequalities demonstrates the ability to analyze and manipulate mathematical relationships. Determining the shape of a graph from an inequality often
-        requires some steps similar to that in previous topics. For example, in 2x + 5 < 11, solving for x yields x < 3. On a graph, this would appear as all values lower than x = 3,
-        uninclusive. Similarly, the inequality x + y < 0 can be thought of as y < -x, or y > x, this is a line through (0,0) with a slope of 1.
-        We will cover solving these more in depth later. 
+        Doing well on these exams means being able to solve inequalities and grasp how the solutions show the range of allowed numbers on a number line.
+        An inequality is a mathematical statement expressing a relationship between two expressions, indicating that one is greater than, less than, or not equal to the other.
+        They can come in many forms, but most fundamentally can be represented as:
+        \[x < \color{red}{a} \] 
+        Which states defines the variable, x, to be less than some constant <span style="color: red;">a</span>. The shape of an inequality defines the area of possible numbers that satisfies the equation.
+        If we set <span style="color: red;">a</span> = 10, all numbers less than 10 would satisfy our equation as below:
+    </div>
+</div>
+    <div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="C:\Users\john\Downloads\inequality.png" alt="Quadratic Expression Plot" style="width: 50%;">
+    </center>
+    </div>
+
+<div class="additional-container">
+    <div class="side-text">   
+        Note the dotted line on 10, signfying it is not included in the set of numbers. Inequalites can also be of multiple variables of the form:
+        \[x + y < \color{blue}{b} \]
+        Which can be rewritten as \(y < \color{blue}{b} - x\) and understood as a line of negative slope that intersects the x-axis
+         at <span style="color: blue;">b</span> where the inequality defines the set of all numbers below this line, shown below (where <span style="color: blue;">b</span> = 10):
+    </div>
+</div>
+    <div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="C:\Users\john\Downloads\slope_inequality.png" alt="Quadratic Expression Plot" style="width: 50%;">
+    </center>
+    </div>
+<div class="additional-container">
+    <div class="side-text">   
+        Importantly, solving inequalities has some rules. You can add or subtract the same value from both sides of the inequality without changing its direction. For example,
+        \(x+3>5\) can be rewritten as \(x>2 \) by subtracting 3 from both sides.
+        You can multiply or divide both sides of the inequality by a positive number without changing its direction. 
+        If you multiply or divide by a negative number, flip the inequality sign. Example 1: \(2x<6\) becomes \(x<3\) by dividing both sides by 2. Example 2: \(-2x < 6 \) becoms
+        \(x > 3\). Using these rules, try solving this inequality and plot it on a graph. Give an example of what this could represent in real life:
+        \[5x - y < 10 \]
+
     </div>
     <div class ="important-text">
         8. Demonstrate knowledge of slope
     </div>
     <div class="side-text">   
-        Slope represents the steepness of a line in a coordinate system. You may encounter multiple versions of representing on a line on the ACT. In point-slope form, 
-        it's expressed as <span style="color: blue;">y</span> - <span style="color: blue;">y₁</span> = <span style="font-weight: bold;">m</span>
-        (<span style="color: red;">x</span> - <span style="color: red;">x₁</span>), 
-        where (<span style="color: red;">x₁</span>, <span style="color: blue;">y₁</span>) is a point, and <span style="font-weight: bold;">m</span> is the slope. 
-        In slope-intercept form, it's <span style="color: blue;">y</span> = <span style="font-weight: bold;">m</span><span style="color: red;">x</span> + b, 
-        where m is the slope and b is the y-intercept. 
-        In standard form (a rearrangment of slope-intercept), it's A<span style="color: red;">x</span> + B<span style="color: blue;">y</span> = C, where A, B, and C are constants. 
+        Slope represents the steepness of a line in a coordinate system. You may encounter multiple versions of representing on a line on the ACT. 
+        In <span style="font-weight: bold;">point-slope form</span>,
+        it's expressed as:
+        \[y - \color{blue}{y₁} = m \cdot (x - \color{red}{x₁}) \]
+        where (<span style="color: red;">x₁</span>, <span style="color: blue;">y₁</span>) is a point, and m is the slope. 
+        In <span style="font-weight: bold;">slope-intercept form</span>, it's 
+        \[y = mx + \color{purple}{b}\]
+        where m is the slope and <span style="color: purple;">b</span> is the y-intercept. 
+        In <span style="font-weight: bold;">standard form</span> (a rearrangment of slope-intercept), it's 
+        \[\color{red}{A}x + \color{blue}{B}y = \color{brown}{C} \] where <span style="color: red;">A</span>, <span style="color: blue;">B</span>, 
+        and <span style="color: brown;">C</span> are constants. 
         On the ACT, understanding these forms is vital for graphing lines 
-        and solving equations. For example, in <span style="color: blue;">y</span> = 2<span style="color: red;">x</span> + 3, the slope is 2, and the y-intercept is 3.
+        and solving equations. Name the following equation types and convert them to the remaining 2:
+        \[5x - 5y = 0\]
+        \[2x + y = 5\]
+        \[y - 5 = 10(x-1)\]
     </div>
     <div class ="important-text">
         9. Solving real-world problems using first degree equations
@@ -14810,59 +14841,131 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     </div>
     <div class ="important-text">
-        10. Solving inequalities
-    </div>
-    <div class="side-text">   
-        Solving inequalities involves manipulating expressions to determine the set of values satisfying the inequality. 
-        Begin by isolating the variable on one side of the inequality sign. Perform operations such as addition, subtraction, multiplication, or 
-        division on both sides, ensuring to maintain the inequality direction. Multiplying or dividing a negative number has the effect of flipping the inequality direction. 
-        For example,
-        consider the inequality -3<span style="color: red;">x</span> < 9. When the coefficient in front of <span style="color: red;">x</span>, -3, is divided over it flips the
-        inequality such that the final answer is <span style="color: red;">x</span> > 3
-    </div>
-    <div class ="important-text">
-        11. Adding, subtracting, and multiplying polynomials
+        10. Adding, subtracting, and multiplying polynomials
     </div>
     <div class="side-text">   
         Adding and subtracting polynomials is a direct application of combining like terms. Multiplying polnomials incoroporates some of the topics found in multiplying binomials
         (if it is a binomial). Generally speaking, understanding how to factor 
     </div>
     <div class ="important-text">
-        12. Solving quadratic equations
+        11. The Quadratic Formula
     </div>
     <div class="side-text">   
      Solving quadratic equations on the ACT involves techniques like factoring, completing the square, 
-     or using the quadratic formula. Understanding these methods is crucial for efficiently finding roots. 
-     For example, in \( \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \), 
-     the quadratic formula is a powerful tool: 
+     or using the quadratic formula. Understanding these methods is crucial for efficiently finding roots. If we take the generalized form of the quadratic equation shown below:
+
+     \[ \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \] 
+     where <span style="color: red;">a</span>, <span style="color: blue;">b</span>, and <span style="color: orange;">c</span> are constants. Questions often ask for the 
+     zeros of this quadratic. The most general solution is to use a powerful tool called the quadratic formula below
     \[ x = (-\color{blue}{b} \pm \sqrt{\color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c}})/(2 \cdot \color{red}{a}) \]
-     Factoring involves breaking down the equation into \((x - \color{green}{p})(x - \color{pink}{q}) = 0\), where \(\color{green}{p}\) and \(\color{pink}{q}\) are roots. 
-     The discriminant, \[ \Delta = \color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c} \] has important applications in determining the nature of the roots.
-     The roots of a quadratic can be postive, negative, complex or purely imaginary. 
-     Mastery of these methods is essential for swiftly and accurately solving quadratic equations, a common skill assessed in the ACT mathematics section.
+    where x are the zeros to the quadratic formula found above. With these zeros, the quardatic can be factored into the form:
+    \[(x - \color{green}{x₁})(x - \color{pink}{x_{2}}) = 0\]where \(\color{green}{x_{1}}\) and \(\color{pink}{x_{2}}\) are roots.
+    The quadratic formula finds two zeros, or roots, so long as the square root is non-zero. This term under the square root is called the discriminent and offers insight into
+    the given quadratic.
+    The discriminant, \[ \Delta = \color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c} \] has important applications in determining the nature of the roots.
+    The discriminant can be zero, positive or negative. If we consider it to be zero, it means the quadratic equation will find one root to be <span style="color: blue;">-b</span>.
+    This is the case for \(y = x^2\), where \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = 0 \), which results in the following graph
+</div>
+    <div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="C:\Users\john\Downloads\quadratic.png" alt="Quadratic Expression Plot" style="width: 50%;">
+    </center>
+    </div>
+
+    </div>
+<div class="additional-container">
+    <div class="side-text">   
+     So a discriminent of zero means that quadratic equation has 1 real root. If we consider the discriminent to be positive, as in \(y = x^2 - 1\), where 
+     \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = 1 \), which results in the same graph, shifted down 1:
+    </div>
+    <div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="C:\Users\john\Downloads\quadratic2.png" alt="Quadratic Expression Plot" style="width: 50%;">
+    </center>
+    </div>
+
+    </div>
+<div class="additional-container">
+    <div class="side-text"> 
+    Which clearly has two real roots. If the discriminent is negative, it means in the quadratic equation we are taking the square root of a negative number. There is no number, x,
+    that can be multiplied by itself that results in a negative number. We then must consider imaginary numbers which are introduced to deal with the square root of negative 
+    numbers, which does not have a real solution. The imaginary unit \(i\) is defined as the square root of -1, meaning
+    \[i^2 = -1\]
+    This means the solution of the quadratic equation will be some real number \(-\color{blue}{b} \) and some imaginary number \(i\sqrt{\Delta}\). This forms complex roots of the
+     form:
+    \[x = -\color{blue}{b} \pm i\sqrt{\Delta}\]
+    Imaginary numbers themselves will be covered in a later section, but understanding what the discriminent tells us is important. 
+    An example of this would be \(y = x^2 + 1\) where
+    \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = 1 \) resulting in the following graph:
+    </div>
+</div>
+<div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="C:\Users\john\Downloads\quadratic3.png" alt="Quadratic Expression Plot" style="width: 50%;">
+    </center>
+</div>
+
+<div class="additional-container">
+    <div class="side-text"> 
+        Which has no real roots, which agrees with the quadratic formula
     </div>
     <div class ="important-text">
-        13. Factoring quadratics
+        12. Difference of Squares
     </div>
     <div class="side-text">   
-        Factoring a quadratic equation with variable coefficients involves expressing it as the product of two binomials, though it could have unlimited factors. 
-        For instance, factoring \( \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} \) yields 
-        \( (\color{pink}{r}x + \color{green}{s}) \cdot (\color{brown}{t}x + \color{purple}{u}) \), where \(\color{pink}{r} \), \(\color{green}{s} \), 
-        \( \color{brown}{t} \), and \( \color{purple}{u}\) 
-        are determined by the equation's coefficients. This can always be done using the quadratic formula from <span style="color: #6CA6CD;">Topic 11</span>. In some cases, 
-        it is helpful to use some shortcuts. For instance, the case of difference of squares:
-        \[x^{\color{red}{2}} - \color{blue}{b} = 0 \] can be useful when b > 0 and a perfect square. It can be rearranged to 
-        \[(x-\color{blue}{b})(x+\color{blue}{b}) \]
-        Another helpful method requires the general form of a quadratic:
-        \[ \color{red}{a}x^2+\color{blue}{b}x+\color{brown}{c} \]
-        identifying two numbers whose product is \( \color{red}{a} \cdot \color{brown}{c} \) and whose sum is \( \color{blue}{b} \). 
-        This method is particularly helpful for factoring quadratic expressions when the numbers involved are small. Example:
-        \[ x^2+5x+6 \] Where \( \color{red}{a} \cdot \color{brown}{c} = 6 \) and \( \color{blue}{b} = 5 \). Two numbers that multiply to 6 and add to 5. These are 2 and 3.
-        So the final factored form is:
-        \[ x^2+5x+6 = (x+2)(x+3) \]
+        Solving the quadratic formula can be challenging, especially in a timed exam. 
+        Identifying scenarios where solution patterns exist can significantly decrease the time spent on a question and reduce the likelihood of calculation errors.
+        Let us consider the case where we have
+        \[ x^2 - \color{orange}{c} = 0\]
+        This can be solved with the quadratic equation where \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \) and \(\color{orange}{c}\) is some real number.Though, it will
+        always factor to the form
+        \[(x-\sqrt{\color{orange}{c}})(x+\sqrt{\color{orange}{c}}) \]
+        Notice, if \(\color{orange}{c} < 0 \): the form above reuslts in 2 imaginary roots. If \(\color{orange}{c} > 0\), then this case will always 
+        result 2 real roots. If \(\color{orange}{c}\) is a perfect square it will result in a fairly simple simplification. Consider
+        \[x^2 - \color{orange}{9} = 0\]
+        This will factor into \[(x-\sqrt{\color{orange}{9}})(x+\sqrt{\color{orange}{9}}) \] \[(x-\color{orange}{3})(x+\color{orange}{3}) \]
+        Recognizing a case of difference of squares makes calculating much more efficient, be careful to consider the signs.
     </div>
     <div class ="important-text">
-        14. Working with squares/square roots and cubes/cube roots
+        12. Factor by Decomposition
+    </div>
+        <div class="side-text"> 
+        The third method that we will consider when factoring a quadratic is what I call factor by decompostion. This considers the coefficients of the the general quadratic
+        of the form:
+             \[ \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \] 
+        This involves identifying two numbers whose product is \( \color{red}{a} \cdot \color{brown}{c} \) and whose sum is \( \color{blue}{b} \). 
+        Let us label these numbers \(\color{pink}{p} \) and \(\color{green}{q} \).
+        When these are found we can re-write the equation, maintaining genearlity, as:
+        \[(\color{red}{a}x^2 + \color{pink}{p}x) + (\color{green}{q}x + \color{orange}{c}) = 0  \] 
+        The goal is to factor each of these two terms such that the are like terms. General forms become complicated at this point so for an example let us consider the equation
+        \[ x^2+5x+6 \]
+        We recognize that \(\color{pink}{p} = 2 \) and \(\color{green}{q} = 3 \) are solutions to our criteria, and the equation can be written as
+        \[ (x^2 + \color{pink}{2}x) + (\color{green}{3}x + 6) \]
+        Importantly, \(\color{pink}{p} \) and \(\color{green}{q} \) are not required to be in this order, through practice one can gain this intuition for solving. As we continue,
+         we can factor out x from the first term and 3 from the second resulting in:
+        \[ x(x + \color{pink}{2}) + 3(\color{green}{1}x + 2) \]
+        which can be simplified to the final factored form:
+        \[(x+3)(x+2)\]
+
+        The special case using this method is if \(\color{red}{a} = 1 \), the values for \( \color{pink}{p}\) and \(\color{green}{q} \) can be used to skip all next steps 
+        to find the final factored form to be:
+        \[(x+\color{pink}{p})(x+\color{green}{q})\]
+
+        This strategy may be equally computationally involved as the quadratic formula if \(\color{red}{a}\) does not equal 1. Importantly, if you cannot find numbers that meet
+        the criteria, it may because there are no real roots for the quadratic. Through practice you can figure out how long you should spend searching for \(\color{pink}{p}\) and
+        \(\color{green}{q}\) before moving to the quadratic formula. If \(\color{red}{a} = 1\), and there are real roots, if practiced this method is much faster than the 
+        quadratic formula. Use the following examples as a way to master this method, and to understand when to use it versus when not to:
+        \[x^2 - 7x + 12\]
+
+        \[x^2 - 6x + 9\]
+        \[5x^2 - 17x + 12\]
+        \[x^2 + 2x + 5 \]
+    </div>
+    <div class ="important-text">
+        13. Working with squares/square roots and cubes/cube roots
     </div>
     <div class="side-text">   
         Common mistakes involving squares and cubes include misapplying distribution, neglecting negative roots, and misunderstanding exponent rules. Solving inequalities with
@@ -14873,7 +14976,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
          and familiarity with these concepts can help avoid these pitfalls.
     </div>
     <div class ="important-text">
-        15. Scientific Notation
+        14. Scientific Notation
     </div>
     <div class="side-text">   
         Scientific notation simplifies expressing large or small numbers, aiding efficiency in scientific and mathematical contexts. Questions on scientific notation assess 
@@ -14883,7 +14986,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         Examples include: \[1.27 \cdot 10^{5} = 127,000 \] \[-1.27 \cdot 10^{5} = -127,000 \] \[1.27 \cdot 10^{-5} = 0.0000127 \]  \[-1.27 \cdot 10^{-5} = -0.0000127 \]
     </div>
     <div class ="important-text">
-        16. Solve problems involving positive integer exponents
+        15. Solve problems involving positive integer exponents
     </div>
     <div class="side-text">   
         Manipulating exponents and understanding their rules is essential to this exam. There are 8 exponent rules to know.
@@ -14897,7 +15000,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         Example questions can be provided at the end, but take time in memorizing these rules so they can be applied quickly and accurately.
     </div>
         <div class ="important-text">
-        17. Solve system of two linear equations
+        16. Solve system of two linear equations
     </div>
     <div class="side-text">   
         Systems of equations involve multiple equations with shared variables. They are solved algebraically using methods like substitution or elimination to find 
@@ -14917,7 +15020,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     </div>
     <div class ="important-text">
-        18. Solve absolute value with inequalities
+        17. Solve absolute value with inequalities
     </div>
     <div class="side-text">   
         Absolute value measures the distance of a number from zero on the number line, always yielding a non-negative result. This section covers the application of 
@@ -14940,7 +15043,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         Notice on the second equation, which takes the negative solution of \( \color{blue}{b} \), the inequality has flipped.
     </div>
     <div class ="important-text">
-        19. Match quadratic inequalities with their graphs on the number line
+        18. Match quadratic inequalities with their graphs on the number line
     </div>
     <div class="side-text">   
     Quadratic inequalities involve expressions of the form \[\color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} > \color{green}{d} \] 
@@ -14948,7 +15051,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     where \(\color{red}{a} \), \(\color{blue}{b} \), \(\color{orange}{c} \), and \(\color{green}{d} \) are constants where \(\color{green}{d} \) is typically 0.
     </div>
     <div class ="important-text">
-        20. Solving quadratic inequaltities
+        19. Solving quadratic inequaltities
     </div>
     <div class="side-text">       
     Generally, quadratic inequality questions are asked to test your knowledge of factoring and deductive reasoning. Lets look at a problem to see how these typcially go.
@@ -15000,28 +15103,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
 </div>
 
-    <script>
-        function checkPassword() {
-            var enteredPassword = document.getElementById('password-input').value;
-            
-            // Replace 'your_password' with the actual password
-            if (enteredPassword === '1234') {
-                document.getElementById('password-wall').style.display = 'none';
-                document.getElementById('hello-message').style.display = 'block';
-                // Store the password state in localStorage
-                localStorage.setItem('passwordEntered', 'true');
-            } else {
-                alert('Incorrect password. Please try again.');
-            }
-        }
+</body>
+</html>
 
-        // Check if password was previously entered
-        var storedPassword = localStorage.getItem('passwordEntered');
-        if (storedPassword === 'true') {
-            document.getElementById('password-wall').style.display = 'none';
-        }
-    </script>
-    
 </div>
 
 </div>
