@@ -15213,6 +15213,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div id="result" style="margin-left: 17%;"></div>
     <script>
         var correctAnswers = 0;
+        var checkmarks = new Array(60).fill(false);
+        var xmarks = new Array(60).fill(false);
 
         function check_answers() {
             correctAnswers = 0; // Reset the counter
@@ -15220,1146 +15222,1338 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             
             var selected_option_1 = document.querySelector('input[name="options_1"]:checked');
             var feedback_div_1 = document.getElementById('feedback_1');
-            if (!selected_option_1) {
-                feedback_div_1.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_1.value == 4) {
-                if (!selected_option_1.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_1) {
+                if (selected_option_1.value == 4) {
                     feedback_div_1.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_1.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_1.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[0]) {
+                        selected_option_1.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[0] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_1.innerHTML = 'Incorrect';
+                    if (!xmarks[0]) {
+                        selected_option_1.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[0] = true;
+                    }
                 }
             } else {
-                if (!selected_option_1.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_1.innerHTML = 'Incorrect';
-                    selected_option_1.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_1.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_1.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_2 = document.querySelector('input[name="options_2"]:checked');
             var feedback_div_2 = document.getElementById('feedback_2');
-            if (!selected_option_2) {
-                feedback_div_2.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_2.value == 3) {
-                if (!selected_option_2.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_2) {
+                if (selected_option_2.value == 3) {
                     feedback_div_2.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_2.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_2.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[1]) {
+                        selected_option_2.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[1] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_2.innerHTML = 'Incorrect';
+                    if (!xmarks[1]) {
+                        selected_option_2.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[1] = true;
+                    }
                 }
             } else {
-                if (!selected_option_2.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_2.innerHTML = 'Incorrect';
-                    selected_option_2.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_2.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_2.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_3 = document.querySelector('input[name="options_3"]:checked');
             var feedback_div_3 = document.getElementById('feedback_3');
-            if (!selected_option_3) {
-                feedback_div_3.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_3.value == 2) {
-                if (!selected_option_3.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_3) {
+                if (selected_option_3.value == 2) {
                     feedback_div_3.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_3.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_3.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[2]) {
+                        selected_option_3.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[2] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_3.innerHTML = 'Incorrect';
+                    if (!xmarks[2]) {
+                        selected_option_3.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[2] = true;
+                    }
                 }
             } else {
-                if (!selected_option_3.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_3.innerHTML = 'Incorrect';
-                    selected_option_3.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_3.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_3.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_4 = document.querySelector('input[name="options_4"]:checked');
             var feedback_div_4 = document.getElementById('feedback_4');
-            if (!selected_option_4) {
-                feedback_div_4.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_4.value == 3) {
-                if (!selected_option_4.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_4) {
+                if (selected_option_4.value == 3) {
                     feedback_div_4.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_4.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_4.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[3]) {
+                        selected_option_4.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[3] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_4.innerHTML = 'Incorrect';
+                    if (!xmarks[3]) {
+                        selected_option_4.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[3] = true;
+                    }
                 }
             } else {
-                if (!selected_option_4.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_4.innerHTML = 'Incorrect';
-                    selected_option_4.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_4.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_4.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_5 = document.querySelector('input[name="options_5"]:checked');
             var feedback_div_5 = document.getElementById('feedback_5');
-            if (!selected_option_5) {
-                feedback_div_5.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_5.value == 1) {
-                if (!selected_option_5.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_5) {
+                if (selected_option_5.value == 1) {
                     feedback_div_5.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_5.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_5.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[4]) {
+                        selected_option_5.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[4] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_5.innerHTML = 'Incorrect';
+                    if (!xmarks[4]) {
+                        selected_option_5.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[4] = true;
+                    }
                 }
             } else {
-                if (!selected_option_5.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_5.innerHTML = 'Incorrect';
-                    selected_option_5.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_5.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_5.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_6 = document.querySelector('input[name="options_6"]:checked');
             var feedback_div_6 = document.getElementById('feedback_6');
-            if (!selected_option_6) {
-                feedback_div_6.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_6.value == 4) {
-                if (!selected_option_6.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_6) {
+                if (selected_option_6.value == 4) {
                     feedback_div_6.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_6.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_6.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[5]) {
+                        selected_option_6.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[5] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_6.innerHTML = 'Incorrect';
+                    if (!xmarks[5]) {
+                        selected_option_6.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[5] = true;
+                    }
                 }
             } else {
-                if (!selected_option_6.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_6.innerHTML = 'Incorrect';
-                    selected_option_6.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_6.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_6.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_7 = document.querySelector('input[name="options_7"]:checked');
             var feedback_div_7 = document.getElementById('feedback_7');
-            if (!selected_option_7) {
-                feedback_div_7.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_7.value == 1) {
-                if (!selected_option_7.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_7) {
+                if (selected_option_7.value == 1) {
                     feedback_div_7.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_7.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_7.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[6]) {
+                        selected_option_7.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[6] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_7.innerHTML = 'Incorrect';
+                    if (!xmarks[6]) {
+                        selected_option_7.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[6] = true;
+                    }
                 }
             } else {
-                if (!selected_option_7.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_7.innerHTML = 'Incorrect';
-                    selected_option_7.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_7.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_7.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_8 = document.querySelector('input[name="options_8"]:checked');
             var feedback_div_8 = document.getElementById('feedback_8');
-            if (!selected_option_8) {
-                feedback_div_8.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_8.value == 0) {
-                if (!selected_option_8.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_8) {
+                if (selected_option_8.value == 0) {
                     feedback_div_8.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_8.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_8.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[7]) {
+                        selected_option_8.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[7] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_8.innerHTML = 'Incorrect';
+                    if (!xmarks[7]) {
+                        selected_option_8.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[7] = true;
+                    }
                 }
             } else {
-                if (!selected_option_8.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_8.innerHTML = 'Incorrect';
-                    selected_option_8.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_8.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_8.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_9 = document.querySelector('input[name="options_9"]:checked');
             var feedback_div_9 = document.getElementById('feedback_9');
-            if (!selected_option_9) {
-                feedback_div_9.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_9.value == 4) {
-                if (!selected_option_9.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_9) {
+                if (selected_option_9.value == 4) {
                     feedback_div_9.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_9.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_9.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[8]) {
+                        selected_option_9.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[8] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_9.innerHTML = 'Incorrect';
+                    if (!xmarks[8]) {
+                        selected_option_9.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[8] = true;
+                    }
                 }
             } else {
-                if (!selected_option_9.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_9.innerHTML = 'Incorrect';
-                    selected_option_9.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_9.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_9.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_10 = document.querySelector('input[name="options_10"]:checked');
             var feedback_div_10 = document.getElementById('feedback_10');
-            if (!selected_option_10) {
-                feedback_div_10.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_10.value == 0) {
-                if (!selected_option_10.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_10) {
+                if (selected_option_10.value == 0) {
                     feedback_div_10.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_10.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_10.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[9]) {
+                        selected_option_10.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[9] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_10.innerHTML = 'Incorrect';
+                    if (!xmarks[9]) {
+                        selected_option_10.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[9] = true;
+                    }
                 }
             } else {
-                if (!selected_option_10.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_10.innerHTML = 'Incorrect';
-                    selected_option_10.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_10.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_10.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_11 = document.querySelector('input[name="options_11"]:checked');
             var feedback_div_11 = document.getElementById('feedback_11');
-            if (!selected_option_11) {
-                feedback_div_11.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_11.value == 2) {
-                if (!selected_option_11.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_11) {
+                if (selected_option_11.value == 2) {
                     feedback_div_11.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_11.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_11.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[10]) {
+                        selected_option_11.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[10] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_11.innerHTML = 'Incorrect';
+                    if (!xmarks[10]) {
+                        selected_option_11.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[10] = true;
+                    }
                 }
             } else {
-                if (!selected_option_11.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_11.innerHTML = 'Incorrect';
-                    selected_option_11.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_11.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_11.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_12 = document.querySelector('input[name="options_12"]:checked');
             var feedback_div_12 = document.getElementById('feedback_12');
-            if (!selected_option_12) {
-                feedback_div_12.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_12.value == 0) {
-                if (!selected_option_12.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_12) {
+                if (selected_option_12.value == 0) {
                     feedback_div_12.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_12.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_12.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[11]) {
+                        selected_option_12.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[11] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_12.innerHTML = 'Incorrect';
+                    if (!xmarks[11]) {
+                        selected_option_12.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[11] = true;
+                    }
                 }
             } else {
-                if (!selected_option_12.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_12.innerHTML = 'Incorrect';
-                    selected_option_12.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_12.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_12.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_13 = document.querySelector('input[name="options_13"]:checked');
             var feedback_div_13 = document.getElementById('feedback_13');
-            if (!selected_option_13) {
-                feedback_div_13.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_13.value == 2) {
-                if (!selected_option_13.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_13) {
+                if (selected_option_13.value == 2) {
                     feedback_div_13.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_13.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_13.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[12]) {
+                        selected_option_13.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[12] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_13.innerHTML = 'Incorrect';
+                    if (!xmarks[12]) {
+                        selected_option_13.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[12] = true;
+                    }
                 }
             } else {
-                if (!selected_option_13.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_13.innerHTML = 'Incorrect';
-                    selected_option_13.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_13.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_13.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_14 = document.querySelector('input[name="options_14"]:checked');
             var feedback_div_14 = document.getElementById('feedback_14');
-            if (!selected_option_14) {
-                feedback_div_14.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_14.value == 2) {
-                if (!selected_option_14.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_14) {
+                if (selected_option_14.value == 2) {
                     feedback_div_14.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_14.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_14.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[13]) {
+                        selected_option_14.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[13] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_14.innerHTML = 'Incorrect';
+                    if (!xmarks[13]) {
+                        selected_option_14.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[13] = true;
+                    }
                 }
             } else {
-                if (!selected_option_14.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_14.innerHTML = 'Incorrect';
-                    selected_option_14.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_14.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_14.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_15 = document.querySelector('input[name="options_15"]:checked');
             var feedback_div_15 = document.getElementById('feedback_15');
-            if (!selected_option_15) {
-                feedback_div_15.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_15.value == 2) {
-                if (!selected_option_15.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_15) {
+                if (selected_option_15.value == 2) {
                     feedback_div_15.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_15.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_15.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[14]) {
+                        selected_option_15.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[14] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_15.innerHTML = 'Incorrect';
+                    if (!xmarks[14]) {
+                        selected_option_15.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[14] = true;
+                    }
                 }
             } else {
-                if (!selected_option_15.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_15.innerHTML = 'Incorrect';
-                    selected_option_15.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_15.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_15.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_16 = document.querySelector('input[name="options_16"]:checked');
             var feedback_div_16 = document.getElementById('feedback_16');
-            if (!selected_option_16) {
-                feedback_div_16.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_16.value == 1) {
-                if (!selected_option_16.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_16) {
+                if (selected_option_16.value == 1) {
                     feedback_div_16.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_16.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_16.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[15]) {
+                        selected_option_16.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[15] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_16.innerHTML = 'Incorrect';
+                    if (!xmarks[15]) {
+                        selected_option_16.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[15] = true;
+                    }
                 }
             } else {
-                if (!selected_option_16.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_16.innerHTML = 'Incorrect';
-                    selected_option_16.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_16.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_16.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_17 = document.querySelector('input[name="options_17"]:checked');
             var feedback_div_17 = document.getElementById('feedback_17');
-            if (!selected_option_17) {
-                feedback_div_17.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_17.value == 0) {
-                if (!selected_option_17.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_17) {
+                if (selected_option_17.value == 0) {
                     feedback_div_17.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_17.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_17.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[16]) {
+                        selected_option_17.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[16] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_17.innerHTML = 'Incorrect';
+                    if (!xmarks[16]) {
+                        selected_option_17.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[16] = true;
+                    }
                 }
             } else {
-                if (!selected_option_17.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_17.innerHTML = 'Incorrect';
-                    selected_option_17.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_17.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_17.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_18 = document.querySelector('input[name="options_18"]:checked');
             var feedback_div_18 = document.getElementById('feedback_18');
-            if (!selected_option_18) {
-                feedback_div_18.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_18.value == 2) {
-                if (!selected_option_18.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_18) {
+                if (selected_option_18.value == 2) {
                     feedback_div_18.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_18.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_18.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[17]) {
+                        selected_option_18.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[17] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_18.innerHTML = 'Incorrect';
+                    if (!xmarks[17]) {
+                        selected_option_18.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[17] = true;
+                    }
                 }
             } else {
-                if (!selected_option_18.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_18.innerHTML = 'Incorrect';
-                    selected_option_18.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_18.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_18.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_19 = document.querySelector('input[name="options_19"]:checked');
             var feedback_div_19 = document.getElementById('feedback_19');
-            if (!selected_option_19) {
-                feedback_div_19.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_19.value == 0) {
-                if (!selected_option_19.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_19) {
+                if (selected_option_19.value == 0) {
                     feedback_div_19.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_19.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_19.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[18]) {
+                        selected_option_19.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[18] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_19.innerHTML = 'Incorrect';
+                    if (!xmarks[18]) {
+                        selected_option_19.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[18] = true;
+                    }
                 }
             } else {
-                if (!selected_option_19.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_19.innerHTML = 'Incorrect';
-                    selected_option_19.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_19.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_19.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_20 = document.querySelector('input[name="options_20"]:checked');
             var feedback_div_20 = document.getElementById('feedback_20');
-            if (!selected_option_20) {
-                feedback_div_20.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_20.value == 2) {
-                if (!selected_option_20.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_20) {
+                if (selected_option_20.value == 2) {
                     feedback_div_20.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_20.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_20.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[19]) {
+                        selected_option_20.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[19] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_20.innerHTML = 'Incorrect';
+                    if (!xmarks[19]) {
+                        selected_option_20.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[19] = true;
+                    }
                 }
             } else {
-                if (!selected_option_20.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_20.innerHTML = 'Incorrect';
-                    selected_option_20.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_20.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_20.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_21 = document.querySelector('input[name="options_21"]:checked');
             var feedback_div_21 = document.getElementById('feedback_21');
-            if (!selected_option_21) {
-                feedback_div_21.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_21.value == 4) {
-                if (!selected_option_21.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_21) {
+                if (selected_option_21.value == 4) {
                     feedback_div_21.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_21.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_21.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[20]) {
+                        selected_option_21.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[20] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_21.innerHTML = 'Incorrect';
+                    if (!xmarks[20]) {
+                        selected_option_21.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[20] = true;
+                    }
                 }
             } else {
-                if (!selected_option_21.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_21.innerHTML = 'Incorrect';
-                    selected_option_21.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_21.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_21.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_22 = document.querySelector('input[name="options_22"]:checked');
             var feedback_div_22 = document.getElementById('feedback_22');
-            if (!selected_option_22) {
-                feedback_div_22.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_22.value == 3) {
-                if (!selected_option_22.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_22) {
+                if (selected_option_22.value == 3) {
                     feedback_div_22.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_22.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_22.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[21]) {
+                        selected_option_22.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[21] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_22.innerHTML = 'Incorrect';
+                    if (!xmarks[21]) {
+                        selected_option_22.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[21] = true;
+                    }
                 }
             } else {
-                if (!selected_option_22.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_22.innerHTML = 'Incorrect';
-                    selected_option_22.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_22.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_22.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_23 = document.querySelector('input[name="options_23"]:checked');
             var feedback_div_23 = document.getElementById('feedback_23');
-            if (!selected_option_23) {
-                feedback_div_23.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_23.value == 3) {
-                if (!selected_option_23.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_23) {
+                if (selected_option_23.value == 3) {
                     feedback_div_23.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_23.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_23.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[22]) {
+                        selected_option_23.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[22] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_23.innerHTML = 'Incorrect';
+                    if (!xmarks[22]) {
+                        selected_option_23.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[22] = true;
+                    }
                 }
             } else {
-                if (!selected_option_23.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_23.innerHTML = 'Incorrect';
-                    selected_option_23.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_23.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_23.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_24 = document.querySelector('input[name="options_24"]:checked');
             var feedback_div_24 = document.getElementById('feedback_24');
-            if (!selected_option_24) {
-                feedback_div_24.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_24.value == 1) {
-                if (!selected_option_24.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_24) {
+                if (selected_option_24.value == 1) {
                     feedback_div_24.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_24.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_24.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[23]) {
+                        selected_option_24.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[23] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_24.innerHTML = 'Incorrect';
+                    if (!xmarks[23]) {
+                        selected_option_24.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[23] = true;
+                    }
                 }
             } else {
-                if (!selected_option_24.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_24.innerHTML = 'Incorrect';
-                    selected_option_24.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_24.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_24.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_25 = document.querySelector('input[name="options_25"]:checked');
             var feedback_div_25 = document.getElementById('feedback_25');
-            if (!selected_option_25) {
-                feedback_div_25.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_25.value == 1) {
-                if (!selected_option_25.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_25) {
+                if (selected_option_25.value == 1) {
                     feedback_div_25.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_25.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_25.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[24]) {
+                        selected_option_25.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[24] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_25.innerHTML = 'Incorrect';
+                    if (!xmarks[24]) {
+                        selected_option_25.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[24] = true;
+                    }
                 }
             } else {
-                if (!selected_option_25.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_25.innerHTML = 'Incorrect';
-                    selected_option_25.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_25.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_25.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_26 = document.querySelector('input[name="options_26"]:checked');
             var feedback_div_26 = document.getElementById('feedback_26');
-            if (!selected_option_26) {
-                feedback_div_26.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_26.value == 0) {
-                if (!selected_option_26.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_26) {
+                if (selected_option_26.value == 0) {
                     feedback_div_26.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_26.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_26.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[25]) {
+                        selected_option_26.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[25] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_26.innerHTML = 'Incorrect';
+                    if (!xmarks[25]) {
+                        selected_option_26.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[25] = true;
+                    }
                 }
             } else {
-                if (!selected_option_26.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_26.innerHTML = 'Incorrect';
-                    selected_option_26.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_26.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_26.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_27 = document.querySelector('input[name="options_27"]:checked');
             var feedback_div_27 = document.getElementById('feedback_27');
-            if (!selected_option_27) {
-                feedback_div_27.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_27.value == 2) {
-                if (!selected_option_27.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_27) {
+                if (selected_option_27.value == 2) {
                     feedback_div_27.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_27.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_27.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[26]) {
+                        selected_option_27.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[26] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_27.innerHTML = 'Incorrect';
+                    if (!xmarks[26]) {
+                        selected_option_27.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[26] = true;
+                    }
                 }
             } else {
-                if (!selected_option_27.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_27.innerHTML = 'Incorrect';
-                    selected_option_27.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_27.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_27.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_28 = document.querySelector('input[name="options_28"]:checked');
             var feedback_div_28 = document.getElementById('feedback_28');
-            if (!selected_option_28) {
-                feedback_div_28.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_28.value == 0) {
-                if (!selected_option_28.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_28) {
+                if (selected_option_28.value == 0) {
                     feedback_div_28.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_28.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_28.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[27]) {
+                        selected_option_28.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[27] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_28.innerHTML = 'Incorrect';
+                    if (!xmarks[27]) {
+                        selected_option_28.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[27] = true;
+                    }
                 }
             } else {
-                if (!selected_option_28.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_28.innerHTML = 'Incorrect';
-                    selected_option_28.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_28.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_28.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_29 = document.querySelector('input[name="options_29"]:checked');
             var feedback_div_29 = document.getElementById('feedback_29');
-            if (!selected_option_29) {
-                feedback_div_29.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_29.value == 4) {
-                if (!selected_option_29.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_29) {
+                if (selected_option_29.value == 4) {
                     feedback_div_29.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_29.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_29.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[28]) {
+                        selected_option_29.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[28] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_29.innerHTML = 'Incorrect';
+                    if (!xmarks[28]) {
+                        selected_option_29.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[28] = true;
+                    }
                 }
             } else {
-                if (!selected_option_29.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_29.innerHTML = 'Incorrect';
-                    selected_option_29.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_29.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_29.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_30 = document.querySelector('input[name="options_30"]:checked');
             var feedback_div_30 = document.getElementById('feedback_30');
-            if (!selected_option_30) {
-                feedback_div_30.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_30.value == 3) {
-                if (!selected_option_30.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_30) {
+                if (selected_option_30.value == 3) {
                     feedback_div_30.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_30.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_30.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[29]) {
+                        selected_option_30.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[29] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_30.innerHTML = 'Incorrect';
+                    if (!xmarks[29]) {
+                        selected_option_30.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[29] = true;
+                    }
                 }
             } else {
-                if (!selected_option_30.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_30.innerHTML = 'Incorrect';
-                    selected_option_30.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_30.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_30.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_31 = document.querySelector('input[name="options_31"]:checked');
             var feedback_div_31 = document.getElementById('feedback_31');
-            if (!selected_option_31) {
-                feedback_div_31.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_31.value == 2) {
-                if (!selected_option_31.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_31) {
+                if (selected_option_31.value == 2) {
                     feedback_div_31.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_31.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_31.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[30]) {
+                        selected_option_31.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[30] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_31.innerHTML = 'Incorrect';
+                    if (!xmarks[30]) {
+                        selected_option_31.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[30] = true;
+                    }
                 }
             } else {
-                if (!selected_option_31.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_31.innerHTML = 'Incorrect';
-                    selected_option_31.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_31.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_31.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_32 = document.querySelector('input[name="options_32"]:checked');
             var feedback_div_32 = document.getElementById('feedback_32');
-            if (!selected_option_32) {
-                feedback_div_32.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_32.value == 4) {
-                if (!selected_option_32.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_32) {
+                if (selected_option_32.value == 4) {
                     feedback_div_32.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_32.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_32.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[31]) {
+                        selected_option_32.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[31] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_32.innerHTML = 'Incorrect';
+                    if (!xmarks[31]) {
+                        selected_option_32.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[31] = true;
+                    }
                 }
             } else {
-                if (!selected_option_32.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_32.innerHTML = 'Incorrect';
-                    selected_option_32.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_32.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_32.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_33 = document.querySelector('input[name="options_33"]:checked');
             var feedback_div_33 = document.getElementById('feedback_33');
-            if (!selected_option_33) {
-                feedback_div_33.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_33.value == 1) {
-                if (!selected_option_33.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_33) {
+                if (selected_option_33.value == 1) {
                     feedback_div_33.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_33.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_33.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[32]) {
+                        selected_option_33.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[32] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_33.innerHTML = 'Incorrect';
+                    if (!xmarks[32]) {
+                        selected_option_33.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[32] = true;
+                    }
                 }
             } else {
-                if (!selected_option_33.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_33.innerHTML = 'Incorrect';
-                    selected_option_33.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_33.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_33.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_34 = document.querySelector('input[name="options_34"]:checked');
             var feedback_div_34 = document.getElementById('feedback_34');
-            if (!selected_option_34) {
-                feedback_div_34.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_34.value == 4) {
-                if (!selected_option_34.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_34) {
+                if (selected_option_34.value == 4) {
                     feedback_div_34.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_34.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_34.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[33]) {
+                        selected_option_34.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[33] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_34.innerHTML = 'Incorrect';
+                    if (!xmarks[33]) {
+                        selected_option_34.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[33] = true;
+                    }
                 }
             } else {
-                if (!selected_option_34.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_34.innerHTML = 'Incorrect';
-                    selected_option_34.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_34.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_34.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_35 = document.querySelector('input[name="options_35"]:checked');
             var feedback_div_35 = document.getElementById('feedback_35');
-            if (!selected_option_35) {
-                feedback_div_35.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_35.value == 2) {
-                if (!selected_option_35.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_35) {
+                if (selected_option_35.value == 2) {
                     feedback_div_35.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_35.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_35.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[34]) {
+                        selected_option_35.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[34] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_35.innerHTML = 'Incorrect';
+                    if (!xmarks[34]) {
+                        selected_option_35.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[34] = true;
+                    }
                 }
             } else {
-                if (!selected_option_35.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_35.innerHTML = 'Incorrect';
-                    selected_option_35.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_35.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_35.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_36 = document.querySelector('input[name="options_36"]:checked');
             var feedback_div_36 = document.getElementById('feedback_36');
-            if (!selected_option_36) {
-                feedback_div_36.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_36.value == 1) {
-                if (!selected_option_36.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_36) {
+                if (selected_option_36.value == 1) {
                     feedback_div_36.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_36.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_36.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[35]) {
+                        selected_option_36.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[35] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_36.innerHTML = 'Incorrect';
+                    if (!xmarks[35]) {
+                        selected_option_36.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[35] = true;
+                    }
                 }
             } else {
-                if (!selected_option_36.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_36.innerHTML = 'Incorrect';
-                    selected_option_36.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_36.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_36.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_37 = document.querySelector('input[name="options_37"]:checked');
             var feedback_div_37 = document.getElementById('feedback_37');
-            if (!selected_option_37) {
-                feedback_div_37.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_37.value == 3) {
-                if (!selected_option_37.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_37) {
+                if (selected_option_37.value == 3) {
                     feedback_div_37.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_37.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_37.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[36]) {
+                        selected_option_37.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[36] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_37.innerHTML = 'Incorrect';
+                    if (!xmarks[36]) {
+                        selected_option_37.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[36] = true;
+                    }
                 }
             } else {
-                if (!selected_option_37.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_37.innerHTML = 'Incorrect';
-                    selected_option_37.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_37.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_37.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_38 = document.querySelector('input[name="options_38"]:checked');
             var feedback_div_38 = document.getElementById('feedback_38');
-            if (!selected_option_38) {
-                feedback_div_38.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_38.value == 3) {
-                if (!selected_option_38.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_38) {
+                if (selected_option_38.value == 3) {
                     feedback_div_38.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_38.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_38.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[37]) {
+                        selected_option_38.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[37] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_38.innerHTML = 'Incorrect';
+                    if (!xmarks[37]) {
+                        selected_option_38.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[37] = true;
+                    }
                 }
             } else {
-                if (!selected_option_38.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_38.innerHTML = 'Incorrect';
-                    selected_option_38.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_38.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_38.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_39 = document.querySelector('input[name="options_39"]:checked');
             var feedback_div_39 = document.getElementById('feedback_39');
-            if (!selected_option_39) {
-                feedback_div_39.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_39.value == 2) {
-                if (!selected_option_39.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_39) {
+                if (selected_option_39.value == 2) {
                     feedback_div_39.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_39.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_39.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[38]) {
+                        selected_option_39.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[38] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_39.innerHTML = 'Incorrect';
+                    if (!xmarks[38]) {
+                        selected_option_39.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[38] = true;
+                    }
                 }
             } else {
-                if (!selected_option_39.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_39.innerHTML = 'Incorrect';
-                    selected_option_39.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_39.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_39.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_40 = document.querySelector('input[name="options_40"]:checked');
             var feedback_div_40 = document.getElementById('feedback_40');
-            if (!selected_option_40) {
-                feedback_div_40.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_40.value == 3) {
-                if (!selected_option_40.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_40) {
+                if (selected_option_40.value == 3) {
                     feedback_div_40.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_40.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_40.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[39]) {
+                        selected_option_40.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[39] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_40.innerHTML = 'Incorrect';
+                    if (!xmarks[39]) {
+                        selected_option_40.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[39] = true;
+                    }
                 }
             } else {
-                if (!selected_option_40.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_40.innerHTML = 'Incorrect';
-                    selected_option_40.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_40.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_40.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_41 = document.querySelector('input[name="options_41"]:checked');
             var feedback_div_41 = document.getElementById('feedback_41');
-            if (!selected_option_41) {
-                feedback_div_41.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_41.value == 0) {
-                if (!selected_option_41.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_41) {
+                if (selected_option_41.value == 0) {
                     feedback_div_41.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_41.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_41.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[40]) {
+                        selected_option_41.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[40] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_41.innerHTML = 'Incorrect';
+                    if (!xmarks[40]) {
+                        selected_option_41.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[40] = true;
+                    }
                 }
             } else {
-                if (!selected_option_41.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_41.innerHTML = 'Incorrect';
-                    selected_option_41.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_41.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_41.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_42 = document.querySelector('input[name="options_42"]:checked');
             var feedback_div_42 = document.getElementById('feedback_42');
-            if (!selected_option_42) {
-                feedback_div_42.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_42.value == 4) {
-                if (!selected_option_42.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_42) {
+                if (selected_option_42.value == 4) {
                     feedback_div_42.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_42.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_42.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[41]) {
+                        selected_option_42.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[41] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_42.innerHTML = 'Incorrect';
+                    if (!xmarks[41]) {
+                        selected_option_42.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[41] = true;
+                    }
                 }
             } else {
-                if (!selected_option_42.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_42.innerHTML = 'Incorrect';
-                    selected_option_42.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_42.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_42.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_43 = document.querySelector('input[name="options_43"]:checked');
             var feedback_div_43 = document.getElementById('feedback_43');
-            if (!selected_option_43) {
-                feedback_div_43.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_43.value == 1) {
-                if (!selected_option_43.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_43) {
+                if (selected_option_43.value == 1) {
                     feedback_div_43.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_43.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_43.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[42]) {
+                        selected_option_43.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[42] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_43.innerHTML = 'Incorrect';
+                    if (!xmarks[42]) {
+                        selected_option_43.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[42] = true;
+                    }
                 }
             } else {
-                if (!selected_option_43.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_43.innerHTML = 'Incorrect';
-                    selected_option_43.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_43.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_43.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_44 = document.querySelector('input[name="options_44"]:checked');
             var feedback_div_44 = document.getElementById('feedback_44');
-            if (!selected_option_44) {
-                feedback_div_44.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_44.value == 4) {
-                if (!selected_option_44.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_44) {
+                if (selected_option_44.value == 4) {
                     feedback_div_44.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_44.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_44.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[43]) {
+                        selected_option_44.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[43] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_44.innerHTML = 'Incorrect';
+                    if (!xmarks[43]) {
+                        selected_option_44.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[43] = true;
+                    }
                 }
             } else {
-                if (!selected_option_44.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_44.innerHTML = 'Incorrect';
-                    selected_option_44.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_44.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_44.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_45 = document.querySelector('input[name="options_45"]:checked');
             var feedback_div_45 = document.getElementById('feedback_45');
-            if (!selected_option_45) {
-                feedback_div_45.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_45.value == 0) {
-                if (!selected_option_45.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_45) {
+                if (selected_option_45.value == 0) {
                     feedback_div_45.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_45.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_45.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[44]) {
+                        selected_option_45.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[44] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_45.innerHTML = 'Incorrect';
+                    if (!xmarks[44]) {
+                        selected_option_45.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[44] = true;
+                    }
                 }
             } else {
-                if (!selected_option_45.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_45.innerHTML = 'Incorrect';
-                    selected_option_45.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_45.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_45.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_46 = document.querySelector('input[name="options_46"]:checked');
             var feedback_div_46 = document.getElementById('feedback_46');
-            if (!selected_option_46) {
-                feedback_div_46.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_46.value == 0) {
-                if (!selected_option_46.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_46) {
+                if (selected_option_46.value == 0) {
                     feedback_div_46.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_46.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_46.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[45]) {
+                        selected_option_46.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[45] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_46.innerHTML = 'Incorrect';
+                    if (!xmarks[45]) {
+                        selected_option_46.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[45] = true;
+                    }
                 }
             } else {
-                if (!selected_option_46.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_46.innerHTML = 'Incorrect';
-                    selected_option_46.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_46.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_46.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_47 = document.querySelector('input[name="options_47"]:checked');
             var feedback_div_47 = document.getElementById('feedback_47');
-            if (!selected_option_47) {
-                feedback_div_47.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_47.value == 4) {
-                if (!selected_option_47.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_47) {
+                if (selected_option_47.value == 4) {
                     feedback_div_47.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_47.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_47.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[46]) {
+                        selected_option_47.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[46] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_47.innerHTML = 'Incorrect';
+                    if (!xmarks[46]) {
+                        selected_option_47.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[46] = true;
+                    }
                 }
             } else {
-                if (!selected_option_47.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_47.innerHTML = 'Incorrect';
-                    selected_option_47.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_47.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_47.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_48 = document.querySelector('input[name="options_48"]:checked');
             var feedback_div_48 = document.getElementById('feedback_48');
-            if (!selected_option_48) {
-                feedback_div_48.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_48.value == 0) {
-                if (!selected_option_48.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_48) {
+                if (selected_option_48.value == 0) {
                     feedback_div_48.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_48.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_48.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[47]) {
+                        selected_option_48.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[47] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_48.innerHTML = 'Incorrect';
+                    if (!xmarks[47]) {
+                        selected_option_48.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[47] = true;
+                    }
                 }
             } else {
-                if (!selected_option_48.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_48.innerHTML = 'Incorrect';
-                    selected_option_48.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_48.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_48.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_49 = document.querySelector('input[name="options_49"]:checked');
             var feedback_div_49 = document.getElementById('feedback_49');
-            if (!selected_option_49) {
-                feedback_div_49.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_49.value == 0) {
-                if (!selected_option_49.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_49) {
+                if (selected_option_49.value == 0) {
                     feedback_div_49.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_49.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_49.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[48]) {
+                        selected_option_49.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[48] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_49.innerHTML = 'Incorrect';
+                    if (!xmarks[48]) {
+                        selected_option_49.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[48] = true;
+                    }
                 }
             } else {
-                if (!selected_option_49.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_49.innerHTML = 'Incorrect';
-                    selected_option_49.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_49.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_49.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_50 = document.querySelector('input[name="options_50"]:checked');
             var feedback_div_50 = document.getElementById('feedback_50');
-            if (!selected_option_50) {
-                feedback_div_50.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_50.value == 1) {
-                if (!selected_option_50.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_50) {
+                if (selected_option_50.value == 1) {
                     feedback_div_50.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_50.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_50.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[49]) {
+                        selected_option_50.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[49] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_50.innerHTML = 'Incorrect';
+                    if (!xmarks[49]) {
+                        selected_option_50.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[49] = true;
+                    }
                 }
             } else {
-                if (!selected_option_50.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_50.innerHTML = 'Incorrect';
-                    selected_option_50.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_50.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_50.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_51 = document.querySelector('input[name="options_51"]:checked');
             var feedback_div_51 = document.getElementById('feedback_51');
-            if (!selected_option_51) {
-                feedback_div_51.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_51.value == 3) {
-                if (!selected_option_51.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_51) {
+                if (selected_option_51.value == 3) {
                     feedback_div_51.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_51.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_51.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[50]) {
+                        selected_option_51.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[50] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_51.innerHTML = 'Incorrect';
+                    if (!xmarks[50]) {
+                        selected_option_51.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[50] = true;
+                    }
                 }
             } else {
-                if (!selected_option_51.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_51.innerHTML = 'Incorrect';
-                    selected_option_51.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_51.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_51.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_52 = document.querySelector('input[name="options_52"]:checked');
             var feedback_div_52 = document.getElementById('feedback_52');
-            if (!selected_option_52) {
-                feedback_div_52.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_52.value == 3) {
-                if (!selected_option_52.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_52) {
+                if (selected_option_52.value == 3) {
                     feedback_div_52.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_52.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_52.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[51]) {
+                        selected_option_52.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[51] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_52.innerHTML = 'Incorrect';
+                    if (!xmarks[51]) {
+                        selected_option_52.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[51] = true;
+                    }
                 }
             } else {
-                if (!selected_option_52.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_52.innerHTML = 'Incorrect';
-                    selected_option_52.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_52.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_52.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_53 = document.querySelector('input[name="options_53"]:checked');
             var feedback_div_53 = document.getElementById('feedback_53');
-            if (!selected_option_53) {
-                feedback_div_53.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_53.value == 3) {
-                if (!selected_option_53.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_53) {
+                if (selected_option_53.value == 3) {
                     feedback_div_53.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_53.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_53.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[52]) {
+                        selected_option_53.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[52] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_53.innerHTML = 'Incorrect';
+                    if (!xmarks[52]) {
+                        selected_option_53.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[52] = true;
+                    }
                 }
             } else {
-                if (!selected_option_53.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_53.innerHTML = 'Incorrect';
-                    selected_option_53.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_53.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_53.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_54 = document.querySelector('input[name="options_54"]:checked');
             var feedback_div_54 = document.getElementById('feedback_54');
-            if (!selected_option_54) {
-                feedback_div_54.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_54.value == 1) {
-                if (!selected_option_54.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_54) {
+                if (selected_option_54.value == 1) {
                     feedback_div_54.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_54.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_54.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[53]) {
+                        selected_option_54.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[53] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_54.innerHTML = 'Incorrect';
+                    if (!xmarks[53]) {
+                        selected_option_54.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[53] = true;
+                    }
                 }
             } else {
-                if (!selected_option_54.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_54.innerHTML = 'Incorrect';
-                    selected_option_54.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_54.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_54.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_55 = document.querySelector('input[name="options_55"]:checked');
             var feedback_div_55 = document.getElementById('feedback_55');
-            if (!selected_option_55) {
-                feedback_div_55.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_55.value == 3) {
-                if (!selected_option_55.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_55) {
+                if (selected_option_55.value == 3) {
                     feedback_div_55.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_55.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_55.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[54]) {
+                        selected_option_55.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[54] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_55.innerHTML = 'Incorrect';
+                    if (!xmarks[54]) {
+                        selected_option_55.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[54] = true;
+                    }
                 }
             } else {
-                if (!selected_option_55.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_55.innerHTML = 'Incorrect';
-                    selected_option_55.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_55.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_55.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_56 = document.querySelector('input[name="options_56"]:checked');
             var feedback_div_56 = document.getElementById('feedback_56');
-            if (!selected_option_56) {
-                feedback_div_56.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_56.value == 0) {
-                if (!selected_option_56.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_56) {
+                if (selected_option_56.value == 0) {
                     feedback_div_56.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_56.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_56.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[55]) {
+                        selected_option_56.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[55] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_56.innerHTML = 'Incorrect';
+                    if (!xmarks[55]) {
+                        selected_option_56.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[55] = true;
+                    }
                 }
             } else {
-                if (!selected_option_56.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_56.innerHTML = 'Incorrect';
-                    selected_option_56.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_56.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_56.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_57 = document.querySelector('input[name="options_57"]:checked');
             var feedback_div_57 = document.getElementById('feedback_57');
-            if (!selected_option_57) {
-                feedback_div_57.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_57.value == 4) {
-                if (!selected_option_57.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_57) {
+                if (selected_option_57.value == 4) {
                     feedback_div_57.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_57.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_57.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[56]) {
+                        selected_option_57.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[56] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_57.innerHTML = 'Incorrect';
+                    if (!xmarks[56]) {
+                        selected_option_57.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[56] = true;
+                    }
                 }
             } else {
-                if (!selected_option_57.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_57.innerHTML = 'Incorrect';
-                    selected_option_57.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_57.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_57.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_58 = document.querySelector('input[name="options_58"]:checked');
             var feedback_div_58 = document.getElementById('feedback_58');
-            if (!selected_option_58) {
-                feedback_div_58.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_58.value == 1) {
-                if (!selected_option_58.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_58) {
+                if (selected_option_58.value == 1) {
                     feedback_div_58.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_58.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_58.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[57]) {
+                        selected_option_58.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[57] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_58.innerHTML = 'Incorrect';
+                    if (!xmarks[57]) {
+                        selected_option_58.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[57] = true;
+                    }
                 }
             } else {
-                if (!selected_option_58.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_58.innerHTML = 'Incorrect';
-                    selected_option_58.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_58.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_58.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_59 = document.querySelector('input[name="options_59"]:checked');
             var feedback_div_59 = document.getElementById('feedback_59');
-            if (!selected_option_59) {
-                feedback_div_59.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_59.value == 3) {
-                if (!selected_option_59.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_59) {
+                if (selected_option_59.value == 3) {
                     feedback_div_59.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_59.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_59.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[58]) {
+                        selected_option_59.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[58] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_59.innerHTML = 'Incorrect';
+                    if (!xmarks[58]) {
+                        selected_option_59.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[58] = true;
+                    }
                 }
             } else {
-                if (!selected_option_59.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_59.innerHTML = 'Incorrect';
-                    selected_option_59.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_59.setAttribute('data-feedback-displayed', 'true');
-                }
+                feedback_div_59.innerHTML = '<span style="color:red;">Please select an answer.</span>';
             }
-            
+        
             var selected_option_60 = document.querySelector('input[name="options_60"]:checked');
             var feedback_div_60 = document.getElementById('feedback_60');
-            if (!selected_option_60) {
-                feedback_div_60.innerHTML = '<span style="color:red;">Please select an answer.</span>';
-            } else if (selected_option_60.value == 1) {
-                if (!selected_option_60.hasAttribute('data-feedback-displayed')) {
+            
+            if (selected_option_60) {
+                if (selected_option_60.value == 1) {
                     feedback_div_60.innerHTML = '<span style="color:green;">Correct.</span>';
-                    selected_option_60.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
-                    selected_option_60.setAttribute('data-feedback-displayed', 'true');
+                    if (!checkmarks[59]) {
+                        selected_option_60.insertAdjacentHTML('beforebegin', '<span style="color:green;font-weight:bold;">✔</span> ');
+                        checkmarks[59] = true;
+                    }
                     correctAnswers++;
+                } else {
+                    feedback_div_60.innerHTML = 'Incorrect';
+                    if (!xmarks[59]) {
+                        selected_option_60.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
+                        xmarks[59] = true;
+                    }
                 }
             } else {
-                if (!selected_option_60.hasAttribute('data-feedback-displayed')) {
-                    feedback_div_60.innerHTML = 'Incorrect';
-                    selected_option_60.insertAdjacentHTML('beforebegin', '<span style="color:red;font-weight:bold;">✘</span> ');
-                    selected_option_60.setAttribute('data-feedback-displayed', 'true');
+                feedback_div_60.innerHTML = '<span style="color:red;">Please select an answer.</span>';
+            }
+        
+            // Display the result after checking all answers
+            var mappedScore = mapRawScore(correctAnswers, [[60, 36], [59, 35], [58, 35], [57, 34], [56, 33], [55, 32], [54, 32], [53, 31], [52, 30], [51, 30], [50, 29], [49, 28], [48, 28], [47, 28], [46, 27], [45, 27], [44, 27], [43, 26], [42, 26], [41, 26], [40, 25], [39, 25], [38, 24], [37, 24], [36, 24], [35, 23], [34, 23], [33, 22], [32, 22], [31, 21], [30, 20], [29, 20], [28, 19], [27, 19], [26, 18], [25, 18], [24, 18], [23, 17], [22, 17], [21, 17], [20, 16], [19, 16], [18, 16], [17, 16], [16, 16], [15, 15], [14, 15], [13, 15], [12, 14], [11, 14], [10, 14], [9, 13], [8, 13], [7, 12], [6, 11], [5, 11], [4, 10], [3, 8], [2, 6], [1, 0], [0, 0]]);
+
+            document.getElementById('result').innerHTML = correctAnswers + ' are correct. This translates to a scaled score of <span style="font-weight:bold; font-size:x-large;">' + mappedScore + '</span>';
+        }
+        
+        // Function to map raw score to a scale
+        function mapRawScore(rawScore, scalingArray) {
+            for (var i = 0; i < scalingArray.length; i++) {
+                if (rawScore >= scalingArray[i][0]) {
+                    return scalingArray[i][1];
                 }
             }
-            
-            // Display the result after checking all answers
-            document.getElementById('result').innerHTML = correctAnswers + ' are correct. This translate to a:';
+            return 0;
         }
     </script>
     
