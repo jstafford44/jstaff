@@ -15071,6 +15071,269 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         To be a real number, the term inside the square root must be positive which builds a circle of radius 4!
     </div>
 </div>
+<div id="unit">
+    <div class="important-text">
+        10. Unit Circle Trigonometry 
+    </div>
+    <div class="side-text">
+    Trigonometry is a side of math that deals with relationships between angles and sides. A helpful tool to invision these functions (to be defined soon) is the unit circle. It is a circle of radius 1, 
+    centered at the origin. Its whole purpose is to give a visual representation of the functions. I want you to imagine a circle at the origin, that is split into quarters that line up with the axis lines, 
+    like this:
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_23.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">
+    Now, start at the point \((1,0)\) and slowly make your way around the circle counter-clockwise. Invision a line from the point you are at toward the center, then imagine an angle (\(\color{orange}{\theta}\)) between this line and the x-axis. 
+
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_24.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">
+    The plot above introduces three functions. Cosine = \(cos\), Sine = \(sin\), and Tangent = \(tan\). Each one of these functions relates the angle, to the point in space. Notice how the point along the circle 
+    creates a right-triangle (in pink). \(cos(\color{orange}{\theta})\) represents the x-coordinate of the point, or the length of the horizontal pink line. \(sin(\color{orange}{\theta})\) represents the y-coordinate of the point, or the length
+    of the vertical pink line. \(tan(\color{orange}{\theta})\) is defined as the ratio of these functions. 
+    <br>
+    These are called trigonometric functions and are 
+    often thought of as a ratio of sides of a triangle. Before we continue, we need to define each one of the sides so that it is clear what we are talking about.
+    <br>
+    <span style="font-weight: bold;">Opposite Side</span>
+    <br>
+    Defined as the side opposite the angle of measure, in our case it would be the vertical pink side. Denoted: \(\color{purple}{O}\)
+    <br>
+    <span style="font-weight: bold;">Hypotenuse</span>
+    <br>
+    The hypotenuse is the side that is opposite the right angle, in our case the angle created from the intersection of the vertical pink side with the horizontal pink side. 
+    Denoted: \(\color{green}{H}\)
+    <br>
+    <span style="font-weight: bold;">Adjacent</span>
+    <br>
+    It is the side that is not the hypotenuse, and not the opposite side. It is defined as the side that is next to the angle, in our case the horizontal pink side. Denoted: \(\color{red}{A}\)
+    <br>
+    With the sides defined we can finally define our functions as the ratio of the sides:
+    \[sin(\color{orange}{\theta}) = \frac{\color{purple}{O}}{\color{green}{H}}\]  
+    \[cos(\color{orange}{\theta}) = \frac{\color{red}{A}}{\color{green}{H}}\]
+    \[tan(\color{orange}{\theta}) = \frac{sin(\color{orange}{\theta})}{cos(\color{orange}{\theta})} = \frac{\color{purple}{O}}{\color{red}{A}}\]    
+    Look back at our image with the pink triangle, in that example the hypotenuse is 1. Meaning the functions \(sin(\color{orange}{\theta})\) and \(cos(\color{orange}{\theta})\) are just the lengths \(\color{purple}{O}\) and \(\color{red}{A}\). 
+    This would mean that the Sine and Cosine would be the \(y\) and \(x\) coordinates respectively as we see. Let us look at a few examples to see how this applies in the ACT.
+    <br>
+    <span style="font-weight: bold;">Examples</span>
+    <br>
+    Take the triangle below \(\Delta ABC\). What is the value of \(tan(A)\)? (A is the angle at point A)
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_25.png" alt="Quadratic Expression Plot" style="width: 10%;">
+        </center>
+    </div>
+    <div class="side-text">
+    Now, we remember that tangent is the ratio of the opposite side to the adjacent side. This would be \(\frac{15}{8}\), the final answer. A helpful hint is the phrase SOH-CAH-TOA, meaning 
+    sine-opposite-hypotenuse, cosine-adjecent-hypotenuse, tangent-opposite-adjacent. To help remember the ratios. Lets do another example.
+    <br>
+    What is \(sin(\theta)\) for the triangle shown below?
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_26.png" alt="Quadratic Expression Plot" style="width: 10%;">
+        </center>
+    </div>
+    <div class="side-text">
+    Remembering our relationships, sine is opposite over hypotenuse which would mean \(\frac{a}{c}\) in this case!
+    <br>
+    With the ratios under our belt, we can now begin to touch on common angles \(\color{orange}{\theta}\) that you must be able to evaluate the trignometric functions at without a calculator. Remember, these functions 
+    conceptually just describe the ratios of triangle sides. One trip around the circle results in degrees a \(\color{orange}{\theta} = \color{orange}{360^{\circ}}\). Though we can also use radians, which is a angular 
+    measurement that uses \(\pi\). In terms of \(\pi\), one trip around the circle is \(2\pi\) radians. 
+    <br>
+    <br>
+    We can then say that 360 degrees is equal to \(2\pi\) radians.
+    <br>
+    <br>
+    That is incredibly important, and being able to translate between degrees and radians is vital to test success. We can then break unit circle into sections. To move \(\pi\) radians (\(180^{\circ}\)) around the circle would 
+    mean to move halfway, which starting at \((1,0)\) would put you at \((-1,0)\). Similarly, to move \(\frac{\pi}{2}\) radians (\(90^{\circ}\)), or a quarter of the way, would put you at \((0,1)\) (the top of the circle). 
+    The points you arrive at after moving some \(\color{orange}{\theta}\) are the \((x,y)\) coordinates, which for the unit circle are \((cos(\color{orange}{\theta}),sin(\color{orange}{\theta}))\). Knowing this, 
+    it provides insight into what exactly is meant by the question: What is \(sin(\color{orange}{\frac{\pi}{4}})\)? It is asking for the y-coordinate of the point on the unit circle when we move \(\frac{\pi}{4}\) radians,
+    or \(45^{\circ}\). Let us take a look at a diagram that shows the unit circle broken into sections with each \(\color{orange}{\theta}\) and its corresponding resulting \((x,y)\) points 
+    along the circle:
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_27.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">
+    Lets get some examples worked out so we can get a feel for what exactly may be asked, now that we know some trigonometry.
+    <span style="font-weight: bold;">Examples:</span>
+    <span style="font-weight: bold;">Problems:</span>
+    <center>
+    1. The radius of the base of the right circular cone shown below is 5 inches, and the height of the cone is 7 inches.
+    Derive an equation that gives the measure, \(\theta\), of the angle formed by a slant height of the 
+    cone and a radius?
+    </div>
+     <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="C:\Users\john\Downloads\act_28.png" alt="Quadratic Expression Plot" style="width: 10%;">
+        </center>
+    </div>
+    <div class="side-text">
+    2. Let \(\color{orange}{\theta}\) be the radian angle measure that satisfies \(sin^2(\color{orange}{\theta}) - sin(\color{orange}{\theta}) = -\frac{1}{4}\) for \(0 < \color{orange}{\theta} < \frac{\pi}{2}\). 
+    What is \(cos(\color{orange}{\theta})\)?
+    </div>
+
+</div>
+<div id="trig-identities">
+    <div class="important-text">
+        11. Trigonometric Identities
+    </div>
+    <div class="side-text">
+        This section will be many expressions that must be memorized. They are important and can make the problems associated with them \(much\) easier. First, I am going to define 3 additional functions
+         that stem from the original big three (\(sin\), \(cos\), and \(tan\)). These will be called Cosecant (\(csc(\color{orange}{\theta})\)), Secant (\(sec(\color{orange}{\theta})\)), and Cotangent (\(cot(\color{orange}{\theta})\)). 
+        These functions are related to the big three as follows:
+        \[csc(\color{orange}{\theta}) = \frac{1}{sin(\color{orange}{\theta})}\]
+        \[sec(\color{orange}{\theta}) = \frac{1}{cos(\color{orange}{\theta})}\]
+        \[cot(\color{orange}{\theta}) = \frac{1}{tan(\color{orange}{\theta})}\]
+
+        Each is a reciprical of the main 3 trignometric functions. These are important because they will be used to relate all the functions together in what we call Pythagorean Identities, this most important of which 
+        is:
+        \[sin^2(\color{orange}{\theta}) + cos^2(\color{orange}{\theta}) = 1\]
+        The other identities to know are:
+        \[sec^2(\color{orange}{\theta}) = tan^2(\color{orange}{\theta}) + 1\]
+        \[csc^2(\color{orange}{\theta}) = cot^2(\color{orange}{\theta}) + 1\]
+        Lets look at an example to see how this may be used:
+        <br>
+        <br>
+        For all \(\color{orange}{\theta}\), the expression \(csc^2(\color{orange}{\theta}) \cdot tan^2(\color{orange}{\theta}) - 1\) is equivalent to:
+        \[(A) \ cot^2(\color{orange}{\theta})\]
+        \[(B) \ tan^2(\color{orange}{\theta})\]
+        \[(C) \ csc^2(\color{orange}{\theta})\]
+        \[(D) \ sec^2(\color{orange}{\theta})\]
+        \[(E) \ cos^2(\color{orange}{\theta})\]
+        The first step in all these styles of problems is to expand the functions to the basic, 
+        \(sin\) and \(cos\) which looks like:
+        \[\frac{1}{sin^2(\color{orange}{\theta})} \cdot \frac{sin^2(\color{orange}{\theta})}{cos^2(\color{orange}{\theta})} - 1\]
+        So we can cancel the \(sin^2(\color{orange}{\theta})\) to find:
+        \[\frac{1}{cos^2(\color{orange}{\theta})} - 1\] which can be cleverly rewritten as:
+        \[\frac{1- cos^2(\color{orange}{\theta})}{cos^2(\color{orange}{\theta})}\] and then using
+        the first pythagorean identity can be written as:
+        \[\frac{1- cos^2(\color{orange}{\theta})}{cos^2(\color{orange}{\theta})} = \frac{sin^2(\color{orange}{\theta})}{cos^2(\color{orange}{\theta})} = tan^2(\color{orange}{\theta})\]
+    </div>
+</div>
+<div id="trig">
+    <div class="important-text">
+        12. Graphing Trigonometric Functions
+    </div>
+    <div class="side-text">
+    </div>
+</div>
+
+<div id="logarithms">
+    <div class="important-text">
+        13. Logarithms
+    </div>
+    <div class="side-text">
+    Fortunately, the ACT does not go too into depth on logarithms so understanding the rules and how to manipulate them is all you need to know how to do! First, what is a logarithm? We went over exponents, 
+    and their rules <a href="https://jstafford44.github.io/algebra#Exponents">here</a>, but a logarithm is asking \(\textit{To what power}\)? In other words, to what power must I raise 2 to equal 4. This would 
+    be equal to 2. Similarly, to what power must I raise 3 to equal 81? This would be 4, as \(3^4 = 81\). A logarithm is a rearrangement of the exponent so that the equation instead solves for the power. The equation 
+    \(3^4 = 81\) has a Base of 3, and a power of 4. This would be written as:
+    \[log_3(81) = 4\]
+    Which reads: "To what power must I raise the base, 3, for it to equal 81?" Generally, this is written:
+    \[log_{\color{blue}{b}}(x) = y\] which is equivilent to the equation: \[\color{blue}{b}^y = x\]. Now, similar to exponents the logarithms 
+    have many rules that allow for their manipulation, all of which stem from the exponent rules:
+    \[log_{\color{red}{a}}(\color{blue}{b}\color{orange}{c}) = log_{\color{red}{a}}(\color{blue}{b}) + log_{\color{red}{a}}(\color{orange}{c})\]
+    \[log_{\color{red}{a}}(\color{blue}{b}^{\color{orange}{c}}) = \color{orange}{c}log_{\color{red}{a}}(\color{blue}{b})\]
+    \[log_{\color{red}{a}}(\frac{\color{orange}{c}}{\color{blue}{b}}) = log_{\color{red}{a}}(\color{orange}{c})- log_{\color{red}{a}}(\color{blue}{b})\]
+    \[log_{\color{red}{a}}(1) = 0\]
+    \[log_{\color{red}{a}}(\color{red}{a}) = 1\]
+    \[log_{\color{red}{a}}(\color{red}{a}^{\color{purple}{r}}) = \color{purple}{r}\]
+    \[log_{\frac{1}{\color{red}{a}}}(\color{blue}{b}) = - log_{\color{red}{a}}(\color{blue}{b})\]
+    \[log_{\color{red}{a}}(\color{blue}{b}) \cdot log_{\color{blue}{b}}(\color{orange}{c}) = log_{\color{red}{a}}(\color{orange}{c})\]
+    \[log_{\color{blue}{b}}(\color{red}{a}) = \frac{1}{log_{\color{red}{a}}(\color{blue}{b})}\]
+    \[log_{\color{red}{a}^{\color{green}{m}}}(\color{red}{a}^{\color{purple}{r}}) = \frac{\color{purple}{r}}{\color{green}{m}} \ \text{for} \ \color{green}{m} \neq 0\]
+    There is one last important distinction to be made. The natural log has the base \(e = 2.71828...\) and is written:
+    \[log_e(x) = ln(x)\]
+    
+    (Note: this comes from the limit of \((1+\frac{1}{n})^n\) 
+    as \(n\) goes to infinity. This derivation is not necessary but the number is)
+    <br>
+    The rules can be daunting but walk through each one knowing the exponent rules we learned to make sense of them. 
+    
+    Lets see how these are applied on the ACT 
+    to see what we need to know:
+
+    <center>
+    1. If \(ln(x) = 4\), then \(x = ?\)
+    <br>
+    2. If \(log_a(x) = m\) and \(log_a(y) = n\), show then \(log_a(\frac{x^3}{y^3}) = 3(m - n)\)
+    <br>
+    3. What real value of \(x\) satisfies the equation \(log_{10}(10^2) = 2x?\)
+
+
+    </div>
+</div>
+
+<div id="composite">
+    <div class="important-text">
+        14. Composite Functions
+    </div>
+    <div class="side-text">
+        If we have a function \(f(x) = \sqrt{x}\) and \(g(x) = x^2\), a composite function is sort of inputting one into the other. 
+        This works like this: \[(f \circ g)(x) = f(g(x)) = f(x^2) = \sqrt{x^2} = x\]
+        Notice how we input our defined function for \(g(x)\) into our function \(f(x)\). For example:
+        \[\text{Given } f(x) = x - \frac{1}{x} \text{ and } g(x) = \frac{1}{x}, \text{ what is } f(g(\frac{1}{2}))?\]
+        We can go about this with two methods, to evaluate \(g(\frac{1}{2})\) then plug into \(f(x)\) or we can input the \(g(x)\) 
+        function into \(f(x)\) then evaluate the resultant function. Whatever method works for you will work. But lets do the first method 
+        where \[g(\frac{1}{2}) = \frac{1}{\frac{1}{2}} = 2\]
+        thus
+        \[f(g(\frac{1}{2})) = f(2) = 2 - \frac{1}{2} = 1.5\]
+        Solve this for practice:
+        \[f(x) = x^2 - 4 \text{ and } g(x) = -2x + 1. \text{ Find } f(g(2x)).\]
+    </div>
+</div>
+<div id="inverse">
+    <div class="important-text">
+        15. Inverse Functions
+    </div>
+    <div class="side-text">
+        An inverse funciton "undoes" the action of the original function. If \(f(x)\) is the original function, 
+        its inverse is \(f^{-1}(x)\). For example, if \(f(x) = x^2 + 1\) then \(f^{-1}(x) = \sqrt{x-1}\) which "undoes" 
+        in order the actions of \(f(x)\). You effectively switch the roles of x and y in original function \(y = f(x)\) and solve for \(y\). 
+        Some important characteristics of inverse functions is that the domain of \(f^{-1}(x)\) is the range of \(f(x)\), and vice versa. Also, consider 
+        restrictions on the domain and range based on the properties of the original function, it remains even if the inverse appears to not 
+        have the same restrictions. For example, if \(f(x) = \sqrt{x}\) then \(f^{-1} = x^2\). The domain of \(f(x)\) = all non-negative real numbers \((x \geq 0)\), whereas 
+        the range of \(f^{-1}(x)\) appears to be all real numbers, we must maintain the restriction and state that the range of \(f^{-1}(x)\) is all non-negative real numbers. The same is true for the domain, 
+        where the range is restricted in \(f(x)\) the domain appears to be unrestricted \(f^{-1}(x)\).
+        <br>
+        Another fact of inverses is:
+        \[f(f^{-1}(x))=f^{-1}(f(x)) = x\]
+        <br>
+        Lets look at some examples:
+        \[1. \text{ The function } f(x) = 5^{\frac{x}{2}} \text{ has an inverse function, } f^{-1}(x), \text{ defined for all } x > 0. \text{ What is this inverse?}\]
+        \[2. \text{ Which of the following describes a true relationship between the funcitons } f(x) = (x-3)^2 + 2 \text{ and } g(x) = \frac{1}{2}x + 1? \]
+        <center>
+        <br>
+        \(f(x) = g(x)\) for exactly 2 values of \(x\)
+        <br>
+        \(f(x) = g(x)\) for exactly 1 value of \(x\)
+        <br>
+        \(f(x) < g(x)\) for all \(x\)
+        <br>
+        \(f(x) > g(x)\) for all \(x\)
+        <br>
+        \(f(x)\) is the inverse of \(g(x)\)
+        <br>
+        </center>
+    </div>
+</div>
 <div id="graph">
     <div class="important-text">
         10. Relate graph to qualitative description
@@ -15092,13 +15355,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="side-text">
     </div>
 </div>
-<div id="composite">
-    <div class="important-text">
-        13. Composite Functions
-    </div>
-    <div class="side-text">
-    </div>
-</div>
 <div id="modeling">
     <div class="important-text">
         14. Model Fit
@@ -15107,34 +15363,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
 </div>
 </div>
-<div id="unit">
-    <div class="important-text">
-        15. Unit Circle Trigonometry 
-    </div>
-    <div class="side-text">
-    </div>
-</div>
-<div id="trig">
-    <div class="important-text">
-        16. Graphing Trigonometric Functions
-    </div>
-    <div class="side-text">
-    </div>
-</div>
-<div id="trig-identities">
-    <div class="important-text">
-        17. Trigonometric Identities
-    </div>
-    <div class="side-text">
-    </div>
-</div>
-<div id="logarithms">
-    <div class="important-text">
-        18. Logarithms
-    </div>
-    <div class="side-text">
-    </div>
-</div>
+
 <div id="two-simple">
     <div class="important-text">
         19. Composite of Two Simple Functions
@@ -15155,14 +15384,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         <li><a href="#asymptote-determine">7. Asymptotes p.2</a></li>
         <li><a href="#two-variables">8. Two-Variable Functions</a></li>
         <li><a href="#graph">9. Relate Graph</a></li>
+        <li><a href="#unit">10. Unit Circle Trigonometry </a></li>
+        <li><a href="#trig-identities">11. Trigonometric Identities </a></li>
+        <li><a href="#trig">12. Graphing Trigonometric Functions </a></li>
+        <li><a href="#logarithms">13. Logarithms </a></li>
+        <li><a href="#composite">14. Composite Functions </a></li>
+        <li><a href="#inverse">15. Inverse Functions </a></li>
+
         <li><a href="#build">10. Build Functions</a></li>
         <li><a href="#recursive">11. Recursive </a></li>
-        <li><a href="#composite">12. Composite Functions </a></li>
+
         <li><a href="#modeling">13. Exponents </a></li>
-        <li><a href="#unit">14. Unit Circle Trigonometry </a></li>
-        <li><a href="#trig">15. Trigonometric Functions </a></li>
+
+
         <li><a href="#trig-identities">17. Trigonometric Identities </a></li>
-        <li><a href="#logarithms">18. Logarithms </a></li>
+
         <li><a href="#two-simple">19. Two Simple Functions </a></li>
         <!-- Add more links as needed -->
     </ul>
