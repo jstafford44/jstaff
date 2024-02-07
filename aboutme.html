@@ -14589,101 +14589,149 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: Times, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<head>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 
-        .top-bar {
-            background-color: #1f3855;
-            color: rgba(204, 204, 204, 1) !important;
-            padding: 10px;
-            text-align: left;
-            font-size: 24px;
-            margin: 0; /* Remove any margin */
-        }
+<style>
+    body {
+        font-family: Times, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-        .top-bar a {
-            color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
-            text-decoration: none !important; /* Remove underlining */
-            margin-right: 15px;
-        }
+    .top-bar {
+        background-color: #1f3855;
+        color: rgba(204, 204, 204, 1) !important;
+        padding: 10px;
+        text-align: left;
+        font-size: 24px;
+        margin: 0; /* Remove any margin */
+    }
 
-        .top-bar .title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; /* Keep the title in white color */
-        }
+    .top-bar a {
+        color: rgba(204, 204, 204, 1) !important; /* Lighter gray color with alpha */
+        text-decoration: none !important; /* Remove underlining */
+        margin-right: 15px;
+    }
 
-        .top-bar .small-link {
-            font-size: 18px; /* Adjust the font size as needed */
-        }
+    .top-bar .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff; /* Keep the title in white color */
+    }
 
-        .link-box {
-            width: 10%;
-            max-height: 200px;
-            overflow-y: auto;
-            padding: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            float: left; /* Float link-box to the left */
-        }
+    .top-bar .small-link {
+        font-size: 18px; /* Adjust the font size as needed */
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 20px 20px 20px 0;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        .additional-text {
-            float: left;
-            margin-left: 20px; /* Add some margin to separate from link-box */
-        }
+    .additional-container {
+        width: 70%;
+        margin-top: 0%; /* Adjust the top margin to leave space for the blue bar */
+        margin-left: 17%;
+    }
 
-        .overview-title {
-            font-size: 36px;
-            color: #000000;
-            font-weight: bold;
-        }
+    .additional-text {
+        font-size: 18px;
+        color: #000000;
+    }
+    .important-text {
+        font-size: 18px;
+        color: #6CA6CD;
+    }
+    .side-text {
+        font-size: 15px;
+        color: #000000;
+        margin-left: 4%;
+    }
+    .title-text {
+        font-size: 36px;
+        color: #000000;
+        margin-top: 0%;
+        font-weight: bold;
+    }
+    .link-box-left {
+        width: 12%;
+        overflow-y: auto;
+        padding: 2%;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5%;
+        float: left;
+        position: fixed;
+        top: 10%; /* Adjusted to align under the blue bar */
+        left: 0; /* Adjusted to move to the far left */
+    }
 
-        .overview-text {
-            font-size: 18px;
-            color: #000000;
-        }
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-        SAT Study Guide
-        <a href="https://jstafford44.github.io" class="small-link">Home</a>
-        <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
+    .toc {
+        width: 20%; /* Adjusted width */
+        position: fixed;
+        top: 8%; /* Adjusted to align under the blue bar */
+        right: -5%; /* Adjusted to move to the far right */
+        transition: top 0.3s;
+    }
+
+    .toc.sticky {
+        top: 0;
+    }
+</style>
+
+<div class="top-bar">
+    ACT Study Guide
+    <a href="https://jstafford44.github.io" class="small-link">Home</a>
+    <a href="https://jstafford44.github.io/aboutme" class="small-link">About me</a>
+</div>
+
+<div class="additional-container">
+    <div class="title-text">
+        Introduction
     </div>
-    <div class="link-box">
-        <!-- Add your scrollable link content here -->
-        <a href="https://jstafford44.github.io/stresses">Common Stresses</a><br>
-        <a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a><br>        
-        <a href="https://jstafford44.github.io/algebra">Algebra</a><br>
-        <a href="https://jstafford44.github.io/calculus">Calculus</a><br>
-        <a href="https://jstafford44.github.io/logarithmics">Logarithmics</a><br>
-        <!-- Add more links as needed -->
+    <div class="important-text">
+        About me:
     </div>
     <div class="additional-text">
-        <div class="overview-title">Introduction</div>
-        <div class="overview-text">
-            Hello! My name is John Stafford.
-        </div>
-        <div class="overview-text">
-            Contact me: 
-            John@sdiver.com
-            (508)-654-0415
-        </div>
+            Hello! My name is John Stafford, I recently graduated Georgia Institute of Technology with a 4.0 in B.S. in Aerospace Engineering. When I first took the ACT (home diagnostic test) I scored a 25, and through 
+            dedicated and purposeful studying I was able to get a 35 officially. I have experience in tutoring for the SAT, and have worked as a teaching 
+            Assistant in Thermodynamics at Georgia Tech for 1 year providing both class lectures as well as 1 on 1 support.
+            I also interned for Honda Aircraft as a thermodynamic analyst Summer 2023, and I currently work at GE Aerospace as a propulsion engineer in Lynn, MA.
+            I strongly believe time management and organization are the pillars of academic performance. 
     </div>
+    <div class="important-text">
+        About this site:
+    </div>
+    <div class="additional-text">
+        I designed this site from the ground up using HTML and Jupyter Notebooks with the goal of providing interactivity, the main downfall of common ACT books. The exam is broken up into several lessons, 
+        each of which is listed in the link box on the left. These lessons are then broken into many different topics with descriptions of its relevance, examples, and solving process. As of now there are 5 
+        REAL interactive ACT math sections, Diagnostic + 4 more, which provide instant scoring using the scale from the actual exam. The formatting of the each of these tests is as close to the true ACT 
+        formatting to provide a similar experience to Test Day. Please start with the diagnostic test to gauge your current knowledge. It is my goal this may help you in your studying.
+    </div>
+    <div class="important-text">
+        Reach out to me!
+    </div>
+    <div class="additional-text">
+        Email: John@sdiver.com
+        <br>
+        <a href="www.linkedin.com/in/john-stafford-208010203" class="small-link">LinkedIn</a>
+    </div>
+</div>
+
+<div class="link-box-left">
+    <!-- Your left link box content goes here -->
+    <li><a href="https://jstafford44.github.io/stresses">Common Stresses</a></li>
+    <li><a href="https://jstafford44.github.io/diagnostic">Diagnostic Test</a></li>
+    <li><a href="https://jstafford44.github.io/numQuan">Number and Quantity</a></li>
+    <li><a href="https://jstafford44.github.io/algebra">Algebra</a></li>
+    <li><a href="https://jstafford44.github.io/functions">Functions</a></li>
+    <li><a href="https://jstafford44.github.io/algFunc">Algebra & Functions</a></li>
+    <li><a href="https://jstafford44.github.io/geometry">Geometry</a></li>
+    <li><a href="https://jstafford44.github.io/statistics">Statistics and Probability</a></li>
+    <li><a href="https://jstafford44.github.io/generator">Test Generator</a></li>
+</div>
+
+</body>
+</html>
 
 </div>
 
