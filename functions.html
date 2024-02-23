@@ -14898,10 +14898,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
 </div>
     <div class="graph-container">
-    <!-- Include the plot generated using the provided Python code -->
-    <center>
-    <img src="act_16.png" alt="Quadratic Expression Plot" style="width: 50%;">
-    </center>
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="act_16.png" alt="Quadratic Expression Plot" style="width: 50%;">
+        </center>
     </div>
     <div class="side-text">
             <br>
@@ -15233,6 +15233,129 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         12. Graphing Trigonometric Functions
     </div>
     <div class="side-text">
+        Now that we have learned what trigonometry is about, we can start to graph them to understand their shape. I would like to take a step back and revisit how we derived our sine and cosine functions. They are defined 
+        as we travel along the unit circle. If we focus solely on the $x$-value as we move, we can see that it bounces between 1 and -1. This cyclic nature of the $x$-value is reflected in the function. We are going to plot 
+        it with increasing angle, $\color{orange}{\theta}$, which should show the $x$-value bouncing back and forth between 1 and -1:
+    </div>
+    <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="act_112.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">   
+        Notice how we start at 1, and slowly decrease toward -1, then back up. Similarly, we can plot $sin(\color{orange}{\theta})$, which should start at 0, and then cycle up toward 1 and back toward -1:
+    </div>
+    <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="act_113.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">        
+        When it comes to graphing a given sine function, there are 4 important characteristics to consider each of which we will define after: Amplitude, Angular Frequency, Phase Angle, and Vertical Shift. Each of these terms changes 
+        the above functions slightly  by stretching it, squishing it or moving it up/down. As I define them, please take a look at the graph below:
+        <br>
+        $\textbf{Amplitude } ( \color{green}{A})$: Determines the maximum displacement from the central position. Both above functions had $\color{green}{A = 1}$. 
+        <br>
+        $\textbf{Angular Frequency } ( \color{blue}{B} \text{ or } \color{blue}{\omega})$: Similar to speed, refers to how quickly we are going around the unit circle and has the affect increasing/decreasing the distance between peaks.
+        <br>
+        $\textbf{Phase Angle } ( \color{red}{C} \text{ or } \color{red}{\phi})$: Horizontally shifts the function left/right. Can be thought of as "moving the starting point of the function by $\color{red}{\phi}$ radians".
+        <br>
+        $\textbf{Vertical Shift } ( \color{orange}{D})$: Vertically shifts the function up/down. It moves the center line that the function oscillates about up/down.
+
+    </div>
+    <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="act_114.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">
+        Note: $\textbf{Period: }$ Distance between peaks, found from angular frequency.
+        \(\textbf{A negative amplitude } (\color{green}{A}) \textbf{ means you instead begin your path at -1 NOT 1.}\) The resulting function would look as if you flip it over the central line: (where $\color{red}{--}$ is 
+        +$\color{green}{A}$ and $\color{blue}{--}$ is $-\color{green}{A}$).
+    </div>
+    <div class="graph-container">
+        <!-- Include the plot generated using the provided Python code -->
+        <center>
+        <img src="act_116.png" alt="Quadratic Expression Plot" style="width: 30%;">
+        </center>
+    </div>
+    <div class="side-text">
+    You 
+        <br>
+        Lets look at a couple example problems to see how these affect the function and how the ACT tests your understanding:
+        <br>
+        <br>
+        \(\textbf{Example Problem 1:}\)
+        <br>    
+
+    </div>
+<div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="act_115.png" alt="Quadratic Expression Plot" style="width: 30%;">
+    </center>
+</div>
+    <div class="side-text">        
+        <br>
+        \(\color{red}{\textbf{Solution}}\)
+        <br>
+        The general equation for a sin function as determined before is:
+        \[y(x) = \color{green}{A}sin(\color{blue}{\omega}x +\color{red}{\phi}) + \color{orange}{D}\]
+        Let us first determine what the variables are for each function. In function $y_1(t)$: $\color{green}{A_1} = a_1$, $\color{blue}{\omega_1} = b_1$, $\color{red}{C_1} = 0$, and $\color{orange}{D_1} = 0$. Similarly, 
+        in function $y_2(t)$: $\color{green}{A_2} = a_2$, $\color{blue}{\omega_2} = b_2$, $\color{red}{C_2} = 0$, and $\color{orange}{D_2} = 0$. The graph shows the amplitudes (peak heights) are different and the 
+        angular frequencies (related to distance between peaks) are different, so $\color{green}{A_1} \neq \color{green}{A_2}$ and $\color{blue}{\omega_1} \neq \color{blue}{\omega_2}$. The question concerns 
+        their amplitudes so lets focus on them. Clearly the peak of $y_1(t)$ is larger than $y_2(t)$, so we could quickly write:
+        \[0 < a_2 < a_1\]
+        which is correct BUT I want to stress that it is important to consider the sign of the amplitude as the graph may look similar and could trick you.
+        <br>
+        <br>
+        \(\textbf{Example Problem 1:}\)
+        <br>    
+        A cosine function is shown in the standard $(x,y)$ coordinate plane below, determine an equation that represents this function.
+    </div>
+<div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="act_117.png" alt="Quadratic Expression Plot" style="width: 30%;">
+    </center>
+</div>
+    <div class="side-text">  
+        <br>
+        \(\color{red}{\textbf{Solution}}\)
+        <br>
+        Lets begin again with the general form of a cosine:
+        \[y(x) = \color{green}{A}cos(\color{blue}{\omega}x +\color{red}{\phi}) + \color{orange}{D}\]
+        We must determine each of these variables from the plot. First, amplitude represents the offset from its center line: $\color{green}{A = 3}$. Second, the 
+        angular frequency is derived from the period of the function which can be read as the distance between peaks of $\pi$. We can use the period equation to relate it 
+        to angular frequency as follows:
+        \[Period = \frac{2\pi}{\color{blue}{\omega}}\]
+        \[\color{blue}{\omega} = \frac{2\pi}{Period} = \frac{2\pi}{\pi} = \color{blue}{2}\]
+        As for Phase Angle, we are told that it is a cosine graph which should start at y(0) = 1 if there is no phase shift. The graph shows this thus: 
+        \[\color{red}{\phi = 0}\]
+        There is no vertical shift as we have a centerline at 0 so:
+        \[\color{orange}{D = 0}\]
+        Which builds the final equation:
+        \[y(x) = \color{green}{3}cos(\color{blue}{2}x +\color{red}{0}) + \color{orange}{0} = \color{green}{3}cos(\color{blue}{2}x)\]
+        <br>
+        Please work on these examples to further your knowledge:
+        <br>
+        <br>
+        \(\textbf{Additional Problem 1:}\)
+        <br>  
+        The functions $y = sin(x)$ and $y = sin(x + a) + b$, for constants $a$ and $b$, are graphed in the standard $(x,y)$ coordinate plane below. The functions have the same maximum value. One of the following 
+        statements of the values of $a$ and $b$ is true. Which statement is it?
+    </div>
+<div class="graph-container">
+    <!-- Include the plot generated using the provided Python code -->
+    <center>
+    <img src="act_118.png" alt="Quadratic Expression Plot" style="width: 30%;">
+    </center>
+</div>
+    <div class="side-text">  
+
     </div>
 </div>
 
