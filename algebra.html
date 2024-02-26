@@ -14687,7 +14687,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="additional-container">
     <div id="topics">
         <div class="title-text">
-            Algebra Topics
+            Algebra Lessons
         </div>
         <div class="additional-text">
             Algebra represents the foundation of much of what is tested on this exam. Mastering the following 19 topics is critical to your success. These begin relatively basic,
@@ -14763,19 +14763,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         6. Multiply two binomials
     </div>
     <div class="side-text">
-        A binomial is a mathematical expression with two terms. Multiplying two binomials, like (<span style="color: red;">a</span> + <span style="color: blue;">b</span>)
-        (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>), 
-        involves using the <span style="font-weight: bold;">distributive</span> property to combine terms. The distributive property is the method of expanding factored terms.
-        It involves multiplying each term in one set of parentheses by every term in another set of parentheses. 
-        The goal is to eliminate the parentheses and express the expression as a sum or difference of individual terms.
-        For instance, (<span style="color: red;">a</span> + 
-        <span style="color: blue;">b</span>) (<span style="color: #00FF00;">c</span> + <span style="color: #FFA500;">d</span>) expands to 
-        <span style="color: red;">a</span><span style="color: #00FF00;">c</span> + <span style="color: red;">a</span><span style="color: #FFA500;">d</span> + 
-        <span style="color: blue;">b</span><span style="color: #00FF00;">c</span> + <span style="color: blue;">b</span><span style="color: #FFA500;">d</span>. Try this example:
-        <center>
-        Expand this polynomial:
-        \((x+2)(x+4) \)
-        </center>
+        A binomial is a mathematical expression with two terms, such as:
+        \[(x+2)(x+3)\]
+        Multiplying this binomial, these two terms, we must use the <span style="font-weight: bold;">distributive</span> property. This is a method of expanding terms
+        where we multiply each term within the parentheses with all other terms in the other parentheses. The result looks like:
+        \[(x^2 + 3x) + (2x + (2)(3))\]
+        Notice that we add all these terms together. The left term of \(x^2 + 3x\) is a result of the x in the left term multiplying the right term, and the \(2x + (2)(3)\) is
+        the result of the 2 in the left term multiplying the right term. Another example would look like:
+        \[(x^2 + 10)(x-5) = (x^3-5x^2) + (10x - 50)\]
+        This process holds for higher order (larger power) polynomials:
+        \[(x^2+2x+2)(x^2+3) = (x^4 + 3x^2) + (2x^3 + 6x) + (2x^2 + 6)\]
+
+        Use the following examples to practice this, both accuracy and speed by expanding these polynomials:
+        \[(x+2)(x+4) \]
+        \[(x^2)(x+4) \]
+        \[(x+2)(x^2+3x+4) \]
     </div>
 </div>
 <div id="Inequalities">
@@ -14864,18 +14866,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </div>
     <div class="side-text">   
         Solving quadratic equations on the ACT involves techniques like factoring, completing the square, 
-        or using the quadratic formula. Understanding these methods is crucial for efficiently finding roots. If we take the generalized form of the quadratic equation shown below:
+        or using the quadratic formula. Understanding these methods is crucial for efficiently finding roots. If we take the general form of a quadratic:
 
-        \[ \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \] 
+        \[ \color{red}{a}x^2 + \color{blue}{b}x + \color{orange}{c} = 0 \]
         where <span style="color: red;">a</span>, <span style="color: blue;">b</span>, and <span style="color: orange;">c</span> are constants. Questions often ask for the 
-        zeros of this quadratic. The most general solution is to use a powerful tool called the quadratic formula below
-        \[ x = \frac{-\color{blue}{b} \pm \sqrt{\color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c}}}{2\color{red}{a}} \]
-        where x are the zeros to the quadratic formula found above. With these zeros, the quardatic can be factored into the form:
+        zeros of this quadratic, where the graph crosses over the x-axis. The most general solution is to use a powerful tool called the quadratic formula below
+        \[ \color{green}{x₁},\color{pink}{x_2} = \frac{-\color{blue}{b} \pm \sqrt{\color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c}}}{2\color{red}{a}} \]
+        where \([\color{green}{x₁},\color{pink}{x_2}]\) are the zeros to the quadratic formula found above. With these zeros, the quardatic can be factored into the form:
         \[(x - \color{green}{x₁})(x - \color{pink}{x_{2}}) = 0\]where \(\color{green}{x_{1}}\) and \(\color{pink}{x_{2}}\) are roots.
         The quadratic formula finds two zeros, or roots, so long as the square root is non-zero. This term under the square root is called the discriminent and offers insight into
         the given quadratic.
         The discriminant, \[ \Delta = \color{blue}{b}^2 - 4 \cdot \color{red}{a} \cdot \color{orange}{c} \] has important applications in determining the nature of the roots.
-        The discriminant can be zero, positive or negative. If we consider it to be zero, it means the quadratic equation will find one root to be <span style="color: blue;">-b</span>.
+        The discriminant can be zero, positive or negative. If we consider it to be zero, it means our quadratic equation simplifies to:
+        \[ \color{green}{x₁},\color{pink}{x_2} = \frac{-\color{blue}{b} \pm \sqrt{0}}{2\color{red}{a}} = \frac{-\color{blue}{b}}{2\color{red}{a}} \]
+        meaning our equation finds that there is one root to be \(\frac{-\color{blue}{b}}{2\color{red}{a}}\)
         This is the case for \(y = x^2\), where \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = 0 \), which results in the following graph
     </div>
 </div>
@@ -14888,7 +14892,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="side-text">   
         So a discriminent of zero means that quadratic equation has 1 real root. If we consider the discriminent to be positive, as in \(y = x^2 - 1\), where 
-        \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = 1 \), which results in the same graph, shifted down 1:
+        \(\color{red}{a} = 1 \), \(\color{blue}{b} = 0 \), and \(\color{orange}{c} = -1 \), which results in the same graph, shifted down 1:
 </div>
 
 <div class="graph-container">
